@@ -8,7 +8,6 @@
 
 #define DIALOG_OK		(YES)
 #define DIALOG_CANCEL	(NO)
-#define OFFSET	(20)
 
 static NSTimer *timer = nil;
 static NSImage *frame;
@@ -204,7 +203,7 @@ static int screensize;
 - (void)aqua_make_main_window:(int)size
 {
 	screensize = size;
-	[[view window] setContentSize:NSMakeSize(size + OFFSET * 2, size + OFFSET * 2)];
+	[[view window] setContentSize:NSMakeSize(size, size)];
 	// create frame buffer
 	frame = [[NSImage alloc] initWithSize:NSMakeSize(size, size)];
 	[frame setFlipped:YES];
