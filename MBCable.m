@@ -42,7 +42,7 @@ reverse(MBCable *cable) {
 	MBComputer *comp1, *comp2;
 	int cwidth, cheight;
 
-	cable = [[self alloc] init];
+	cable = [[[self alloc] init] autorelease];
 
 	cable->c1 = RAND(0, [network Network_num_computers] - 1);
 	do {

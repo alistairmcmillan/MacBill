@@ -97,7 +97,7 @@ static int screensize;
 - (void)aqua_load_picture:(const char *)name :(int)trans :(MBPicture **)pictp
 {
 	MBPicture *pict = malloc(sizeof(MBPicture));
-	NSString *s = [NSString stringWithCString:name];
+	NSString *s = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
 	pict->img = [NSImage imageNamed:s];
 	*pictp = pict;
 }
@@ -147,7 +147,7 @@ static int screensize;
 
 - (void)aqua_draw_string:(const char *)str :(int)x :(int)y
 {
-	NSString *status = [NSString stringWithCString:str];
+	NSString *status = [NSString stringWithCString:str encoding:NSUTF8StringEncoding];
 	NSDictionary *attrs = nil;
 	NSSize size = [status sizeWithAttributes:attrs];
 	[frame lockFocus];
@@ -184,7 +184,7 @@ static int screensize;
 	switch (dialog) {
 	case DIALOG_ENTERNAME:
 		[NSApp runModalForWindow:[entry window]];
-		[game Game_add_high_score:[[entry stringValue] cString]];
+		[game Game_add_high_score:[[entry stringValue] UTF8String]];
 		break;
 	case DIALOG_PAUSEGAME:
 		[self runAlertPanel:@"pause" :NO];
@@ -366,7 +366,7 @@ static int screensize;
 
 
 // enable/disable menu item
-- (BOOL)validateMenuItem:(id <NSMenuItem>)menuItem
+- (BOOL)validateMenuItem:(NSMenuItem *)menuItem
 {
 	if (menuItem == menu_pause) {
 		return menu_pause_enable_flag;

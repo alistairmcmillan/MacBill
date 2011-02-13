@@ -49,7 +49,7 @@ determineOS(MBComputer *computer) {
 
 + (MBComputer *)Computer_setup:(int)index
 {
-	MBComputer *computer = [[self alloc] init];
+	MBComputer *computer = [[[self alloc] init] autorelease];
 
 	int j, counter = 0, flag;
 	int randx, randy;

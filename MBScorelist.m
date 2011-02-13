@@ -55,7 +55,7 @@ static NSMutableArray *scores;
 	if (str == NULL || str[0] == 0) {
 		strName = @"Anonymous";
 	} else {
-		strName = [NSString stringWithCString:str];
+		strName = [NSString stringWithCString:str encoding:NSUTF8StringEncoding];
         }
 
 	dict = [NSMutableDictionary dictionary];

@@ -32,13 +32,11 @@ static int counters[NETWORK_COUNTER_MAX + 1]; 	/* number in each state */
 	ncomputers = [self on:[game Game_level]];
 	if (computers != nil)
 		while ([computers count] != 0) {
-			[[computers objectAtIndex:0] release];
 			[computers removeObjectAtIndex:0];
 		}
 		[computers release];
 	if (cables != nil) {
 		while ([cables count] != 0) {
-			[[cables objectAtIndex:0] release];
 			[cables removeObjectAtIndex:0];
 		}
 		[cables release];
