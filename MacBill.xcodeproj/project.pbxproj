@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		256AC3DA0F4B6AC300CF3369 /* MacBillAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* MacBillAppDelegate.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		F375677912FE0C9100A41122 /* ahh0.wav in Resources */ = {isa = PBXBuildFile; fileRef = F375677812FE0C9100A41122 /* ahh0.wav */; };
+		F375678F12FE10B200A41122 /* ahh1.wav in Resources */ = {isa = PBXBuildFile; fileRef = F375678B12FE10B200A41122 /* ahh1.wav */; };
+		F375679012FE10B200A41122 /* ahh2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F375678C12FE10B200A41122 /* ahh2.wav */; };
+		F375679112FE10B200A41122 /* ahh3.wav in Resources */ = {isa = PBXBuildFile; fileRef = F375678D12FE10B200A41122 /* ahh3.wav */; };
+		F375679212FE10B200A41122 /* mssound.wav in Resources */ = {isa = PBXBuildFile; fileRef = F375678E12FE10B200A41122 /* mssound.wav */; };
 		F3A11A3112F5FCA2002F26FE /* MacBill.icns in Resources */ = {isa = PBXBuildFile; fileRef = F3A11A3012F5FCA2002F26FE /* MacBill.icns */; };
 		F3A11A6512F5FD56002F26FE /* MBAqua.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A4C12F5FD55002F26FE /* MBAqua.m */; };
 		F3A11A6612F5FD56002F26FE /* MBBill.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A4E12F5FD55002F26FE /* MBBill.m */; };
@@ -86,8 +90,6 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		256AC3D80F4B6AC300CF3369 /* MacBillAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacBillAppDelegate.h; sourceTree = "<group>"; };
-		256AC3D90F4B6AC300CF3369 /* MacBillAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacBillAppDelegate.m; sourceTree = "<group>"; };
 		256AC3F00F4B6AF500CF3369 /* MacBill_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacBill_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -96,6 +98,11 @@
 		8D1107320486CEB800E47090 /* MacBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F335DDAA12F5FEE000531FA8 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F335DDB312F5FEE600531FA8 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Japanese; path = Japanese.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F375677812FE0C9100A41122 /* ahh0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ahh0.wav; path = wavs/ahh0.wav; sourceTree = "<group>"; };
+		F375678B12FE10B200A41122 /* ahh1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ahh1.wav; path = wavs/ahh1.wav; sourceTree = "<group>"; };
+		F375678C12FE10B200A41122 /* ahh2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ahh2.wav; path = wavs/ahh2.wav; sourceTree = "<group>"; };
+		F375678D12FE10B200A41122 /* ahh3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ahh3.wav; path = wavs/ahh3.wav; sourceTree = "<group>"; };
+		F375678E12FE10B200A41122 /* mssound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = mssound.wav; path = wavs/mssound.wav; sourceTree = "<group>"; };
 		F3A11A3012F5FCA2002F26FE /* MacBill.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MacBill.icns; sourceTree = "<group>"; };
 		F3A11A4B12F5FD55002F26FE /* MBAqua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAqua.h; sourceTree = "<group>"; };
 		F3A11A4C12F5FD55002F26FE /* MBAqua.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAqua.m; sourceTree = "<group>"; };
@@ -222,8 +229,6 @@
 				F3A11A6212F5FD56002F26FE /* MBSpark.m */,
 				F3A11A6312F5FD56002F26FE /* MBUI.h */,
 				F3A11A6412F5FD56002F26FE /* MBUI.m */,
-				256AC3D80F4B6AC300CF3369 /* MacBillAppDelegate.h */,
-				256AC3D90F4B6AC300CF3369 /* MacBillAppDelegate.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F375677712FE0C8600A41122 /* wavs */,
 				F3BECE6912F5FFD9004309D4 /* Localizable.strings */,
 				F3A11A7612F5FDB6002F26FE /* tiffs */,
 				F3A11A3012F5FCA2002F26FE /* MacBill.icns */,
@@ -297,6 +303,18 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F375677712FE0C8600A41122 /* wavs */ = {
+			isa = PBXGroup;
+			children = (
+				F375678B12FE10B200A41122 /* ahh1.wav */,
+				F375678C12FE10B200A41122 /* ahh2.wav */,
+				F375678D12FE10B200A41122 /* ahh3.wav */,
+				F375678E12FE10B200A41122 /* mssound.wav */,
+				F375677812FE0C9100A41122 /* ahh0.wav */,
+			);
+			name = wavs;
 			sourceTree = "<group>";
 		};
 		F3A11A7612F5FDB6002F26FE /* tiffs */ = {
@@ -464,6 +482,11 @@
 				F3A11ADD12F5FDB7002F26FE /* toaster.tiff in Resources */,
 				F3A11ADE12F5FDB7002F26FE /* wingdows.tiff in Resources */,
 				F3BECE6B12F5FFD9004309D4 /* Localizable.strings in Resources */,
+				F375677912FE0C9100A41122 /* ahh0.wav in Resources */,
+				F375678F12FE10B200A41122 /* ahh1.wav in Resources */,
+				F375679012FE10B200A41122 /* ahh2.wav in Resources */,
+				F375679112FE10B200A41122 /* ahh3.wav in Resources */,
+				F375679212FE10B200A41122 /* mssound.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +498,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				256AC3DA0F4B6AC300CF3369 /* MacBillAppDelegate.m in Sources */,
 				F3A11A6512F5FD56002F26FE /* MBAqua.m in Sources */,
 				F3A11A6612F5FD56002F26FE /* MBBill.m in Sources */,
 				F3A11A6712F5FD56002F26FE /* MBBucket.m in Sources */,
