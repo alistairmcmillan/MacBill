@@ -8,7 +8,7 @@
 #define MIN_PC 6		/* OS >= MIN_PC means the OS is a PC OS */
 
 static const char *osname[] = {"wingdows", "apple", "next", "sgi", "sun",
-			       "palm", "os2", "bsd", "linux", "redhat", "hurd"};
+			       "palm", "os2", "bsd", "linux", "redhat", "hurd", "beos"};
 #define NUM_OS (sizeof(osname) / sizeof(osname[0]))
 
 static MBPicture *os[NUM_OS];		/* array of OS pictures*/

@@ -11,6 +11,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		F35EFDAE13230652009A6D3C /* beos.png in Resources */ = {isa = PBXBuildFile; fileRef = F35EFDAD13230652009A6D3C /* beos.png */; };
 		F375677912FE0C9100A41122 /* ahh0.wav in Resources */ = {isa = PBXBuildFile; fileRef = F375677812FE0C9100A41122 /* ahh0.wav */; };
 		F375678F12FE10B200A41122 /* ahh1.wav in Resources */ = {isa = PBXBuildFile; fileRef = F375678B12FE10B200A41122 /* ahh1.wav */; };
 		F375679012FE10B200A41122 /* ahh2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F375678C12FE10B200A41122 /* ahh2.wav */; };
@@ -98,6 +99,7 @@
 		8D1107320486CEB800E47090 /* MacBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F335DDAA12F5FEE000531FA8 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F335DDB312F5FEE600531FA8 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Japanese; path = Japanese.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F35EFDAD13230652009A6D3C /* beos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beos.png; sourceTree = "<group>"; };
 		F375677812FE0C9100A41122 /* ahh0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ahh0.wav; path = wavs/ahh0.wav; sourceTree = "<group>"; };
 		F375678B12FE10B200A41122 /* ahh1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ahh1.wav; path = wavs/ahh1.wav; sourceTree = "<group>"; };
 		F375678C12FE10B200A41122 /* ahh2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ahh2.wav; path = wavs/ahh2.wav; sourceTree = "<group>"; };
@@ -287,7 +289,7 @@
 			children = (
 				F375677712FE0C8600A41122 /* wavs */,
 				F3BECE6912F5FFD9004309D4 /* Localizable.strings */,
-				F3A11A7612F5FDB6002F26FE /* tiffs */,
+				F3A11A7612F5FDB6002F26FE /* images */,
 				F3A11A3012F5FCA2002F26FE /* MacBill.icns */,
 				8D1107310486CEB800E47090 /* MacBill-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -317,11 +319,12 @@
 			name = wavs;
 			sourceTree = "<group>";
 		};
-		F3A11A7612F5FDB6002F26FE /* tiffs */ = {
+		F3A11A7612F5FDB6002F26FE /* images */ = {
 			isa = PBXGroup;
 			children = (
 				F3A11A7712F5FDB6002F26FE /* about.tiff */,
 				F3A11A7812F5FDB6002F26FE /* apple.tiff */,
+				F35EFDAD13230652009A6D3C /* beos.png */,
 				F3A11A7912F5FDB6002F26FE /* billA_0.tiff */,
 				F3A11A7A12F5FDB6002F26FE /* billA_1.tiff */,
 				F3A11A7B12F5FDB6002F26FE /* billA_10.tiff */,
@@ -373,7 +376,7 @@
 				F3A11AA912F5FDB7002F26FE /* toaster.tiff */,
 				F3A11AAA12F5FDB7002F26FE /* wingdows.tiff */,
 			);
-			path = tiffs;
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,6 +490,7 @@
 				F375679012FE10B200A41122 /* ahh2.wav in Resources */,
 				F375679112FE10B200A41122 /* ahh3.wav in Resources */,
 				F375679212FE10B200A41122 /* mssound.wav in Resources */,
+				F35EFDAE13230652009A6D3C /* beos.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
