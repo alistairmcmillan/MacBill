@@ -7,10 +7,6 @@
  *
  */
 
-#include <Carbon/Carbon.h>
-
-#include <stdlib.h>
-
 #ifdef RAND
 #undef RAND
 #endif

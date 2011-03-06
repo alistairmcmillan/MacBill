@@ -7,7 +7,5 @@
  *
  */
 
-#include <Carbon/Carbon.h>
-
 typedef struct MBPicture MBPicture;
 typedef struct MBMCursor MBMCursor;
