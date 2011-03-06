@@ -326,6 +326,12 @@ static int screensize;
 		[defaults registerDefaults:dict];
 	}
 	
+	// if we don't have a value already
+	// set default for animation interval
+	if ([defaults integerForKey:@"interval"] == 0) {
+		[defaults setInteger:200 forKey:@"interval"];
+	}
+
 	[[view window] center];
 	// autosave frame info
 	[[view window] setFrameAutosaveName:@"main"];
