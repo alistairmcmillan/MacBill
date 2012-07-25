@@ -216,6 +216,11 @@ static int screensize = SCREENSIZE;
 	iteration++;
 }
 
+- (int)Game_state
+{
+    return state;
+}
+
 - (int)Game_score
 {
 	return score;

@@ -217,11 +217,13 @@ static int screensize;
 
 - (IBAction)new_game:(id)sender
 {
-	int ret;
-	ret = [self runAlertPanel:@"newgame" :YES];
-	if (ret != NSAlertDefaultReturn) {
-		return;
-	}
+    if([game Game_state] != 4) { // check whether a game is active
+        int ret;
+        ret = [self runAlertPanel:@"newgame" :YES];
+        if (ret != NSAlertDefaultReturn) {
+            return;
+        }
+    }
 	[ui UI_kill_timer];
 	[game Game_start:1];
 }
@@ -349,12 +351,16 @@ static int screensize;
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
 	int ret;
-	ret = [self runAlertPanel:@"quit" :YES];
-	if (ret != NSAlertDefaultReturn) {
-		return NSTerminateCancel;
-	}
-	[game Game_quit];
-	return NSTerminateNow;
+    if([game Game_state] != 4) { // check whether a game is active
+        ret = [self runAlertPanel:@"quit" :YES];
+        if (ret != NSAlertDefaultReturn) {
+            return NSTerminateCancel;
+        }
+        [game Game_quit];
+        return NSTerminateNow;
+    } else {    
+        return NSTerminateNow;
+    }
 }
 
 

@@ -21,6 +21,7 @@
 - (void)Game_button_release:(int)x :(int)y;
 - (void)Game_update;
 
+- (int)Game_state;
 - (int)Game_score;
 - (int)Game_level;
 - (int)Game_screensize;
