@@ -41,23 +41,28 @@ static int screensize;
 }
 
 // private
-- (int)runAlertPanel:(NSString *)name :(BOOL)needsAltBtn;
+- (NSAlert *)runAlertPanel:(NSString *)name :(BOOL)needsAltBtn;
 {
-	NSString *strMsg, *strTitle, *strBtn1, *strBtn2;
-	strTitle = NSLocalizedString([name stringByAppendingString:@"_dialog_str_title"], nil);
-	strMsg   = NSLocalizedString([name stringByAppendingString:@"_dialog_str_msg"], nil);
-	strBtn1  = NSLocalizedString([name stringByAppendingString:@"_dialog_str_btn1"], nil);
-	if (needsAltBtn == YES) {
-		strBtn2  = NSLocalizedString([name stringByAppendingString:@"_dialog_str_btn2"], nil);
-	} else {
-		strBtn2 = nil;
-	}
-	if ([name isEqualToString:@"score"]) {
-		return NSRunAlertPanel(strTitle, strMsg, strBtn1, strBtn2, nil,
-								[game Game_level], [game Game_score]);
-	} else {
-		return NSRunAlertPanel(strTitle, strMsg, strBtn1, strBtn2, nil);
-	}
+    NSString *strMsg, *strTitle, *strBtn1, *strBtn2;
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setAlertStyle:NSAlertStyleInformational];
+    
+    strTitle = NSLocalizedString([name stringByAppendingString:@"_dialog_str_title"], nil);
+    strMsg   = NSLocalizedString([name stringByAppendingString:@"_dialog_str_msg"], nil);
+    strBtn1  = NSLocalizedString([name stringByAppendingString:@"_dialog_str_btn1"], nil);
+
+    if ([name isEqualToString:@"score"]) {
+        strMsg = [NSString stringWithFormat:strMsg, [game Game_level], [game Game_score]];
+    }
+    [alert setMessageText:strTitle];
+    [alert setInformativeText:strMsg];
+    [alert addButtonWithTitle:strBtn1];
+
+    if (needsAltBtn == YES) {
+        strBtn2  = NSLocalizedString([name stringByAppendingString:@"_dialog_str_btn2"], nil);
+        [alert addButtonWithTitle:strBtn2];
+    }
+    return alert;
 }
 
 /*
@@ -180,20 +185,24 @@ static int screensize;
 
 - (void)aqua_popup_dialog:(int)dialog
 {
-	switch (dialog) {
+    NSAlert *alert;
+    switch (dialog) {
 	case DIALOG_ENTERNAME:
 		[NSApp runModalForWindow:[entry window]];
 		[game Game_add_high_score:[[entry stringValue] UTF8String]];
 		break;
 	case DIALOG_PAUSEGAME:
-		[self runAlertPanel:@"pause" :NO];
+        alert = [self runAlertPanel:@"pause" :NO];
+        [alert beginSheetModalForWindow:[view window] completionHandler:nil];
 		break;
 	case DIALOG_ENDGAME:
-		[self runAlertPanel:@"endgame" :NO];
-		break;
+		alert = [self runAlertPanel:@"endgame" :NO];
+        [alert beginSheetModalForWindow:[view window] completionHandler:nil];
+        break;
 	case DIALOG_SCORE:
-		[self runAlertPanel:@"score" :NO];
-		break;
+		alert = [self runAlertPanel:@"score" :NO];
+        [alert beginSheetModalForWindow:[view window] completionHandler:nil];
+        break;
 	case DIALOG_HIGHSCORE:
 		[self high_score:self];
 		break;
@@ -218,14 +227,20 @@ static int screensize;
 - (IBAction)new_game:(id)sender
 {
     if([game Game_state] != 4) { // check whether a game is active
-        int ret;
-        ret = [self runAlertPanel:@"newgame" :YES];
-        if (ret != NSAlertDefaultReturn) {
-            return;
-        }
+        NSAlert *alert;
+        alert = [self runAlertPanel:@"newgame" :YES];
+        [alert beginSheetModalForWindow:[view window] completionHandler:^(NSInteger result) {
+            if (result != NSAlertFirstButtonReturn){
+                return;
+            } else {
+                [ui UI_kill_timer];
+                [game Game_start:1];
+            }
+        }];
+    } else {
+        [ui UI_kill_timer];
+        [game Game_start:1];
     }
-	[ui UI_kill_timer];
-	[game Game_start:1];
 }
 
 - (IBAction)pause_game:(id)sender
@@ -240,9 +255,9 @@ static int screensize;
 
 - (IBAction)warp_level:(id)sender
 {
-	int ret;
+	NSInteger ret;
 	ret = [NSApp runModalForWindow:[warp window]];
-	if (ret == DIALOG_OK) {
+    if (ret == NSModalResponseOK) {
 		int level = [warp intValue];
 		if (level == 0) {
 			level = 1;
@@ -274,7 +289,8 @@ static int screensize;
 
 - (IBAction)pref:(id)sender
 {
-	int i, tmp, ret;
+	int i, tmp;
+    NSInteger ret;
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	NSString *keys[] = { @"fieldsize", @"interval", @"transparency" };
 	id texts[] = { text_size, text_timer, text_trans };
@@ -286,7 +302,7 @@ static int screensize;
 		[sliders[i] setIntValue:tmp];
 	}
 	ret = [NSApp runModalForWindow:[text_size window]];
-	if (ret == DIALOG_OK) {
+    if (ret == NSModalResponseOK) {
 		for (i = 0; i < 3; i++) {
 			[defaults setInteger:[texts[i] intValue] forKey:keys[i]];
 		}
@@ -350,15 +366,17 @@ static int screensize;
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
-	int ret;
+    NSAlert* alert;
     if([game Game_state] != 4) { // check whether a game is active
-        ret = [self runAlertPanel:@"quit" :YES];
-        if (ret != NSAlertDefaultReturn) {
+        NSLog(@"Game is active");
+        alert = [self runAlertPanel:@"quit" :YES];
+        NSModalResponse ret = [alert runModal];
+        if (ret != NSAlertFirstButtonReturn) {
             return NSTerminateCancel;
         }
         [game Game_quit];
         return NSTerminateNow;
-    } else {    
+    } else {
         return NSTerminateNow;
     }
 }
