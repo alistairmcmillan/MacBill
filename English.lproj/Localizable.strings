@@ -1,16 +1,16 @@
 /* Dialog boxes */
 
-"newgame_dialog_str_title" = "New Game?";
-"newgame_dialog_str_msg" = "";
-"newgame_dialog_str_btn1" = "OK";
-"newgame_dialog_str_btn2" = "Cancel";
+"newgame_dialog_str_title" = "Start a New Game?";
+"newgame_dialog_str_msg" = "If you start a New Game you will lose your progress in the current game.";
+"newgame_dialog_str_btn1" = "New Game";
+"newgame_dialog_str_btn2" = "Continue Game";
 
-"quit_dialog_str_title" = "Quit MacBill?";
-"quit_dialog_str_msg" = "";
-"quit_dialog_str_btn1" = "OK";
-"quit_dialog_str_btn2" = "Cancel";
+"quit_dialog_str_title" = "Are you sure you want to Quit?";
+"quit_dialog_str_msg" = "If you Quit you will lose your progress in the current game.";
+"quit_dialog_str_btn1" = "Quit";
+"quit_dialog_str_btn2" = "Don't Quit";
 
-"pause_dialog_str_title" = "Game paused.";
+"pause_dialog_str_title" = "Game paused";
 "pause_dialog_str_msg" = "Press Continue to continue.";
 "pause_dialog_str_btn1" = "Continue";
 
@@ -19,5 +19,5 @@
 "endgame_dialog_str_btn1" = "Nuts!";
 
 "score_dialog_str_title" = "Clear!";
-"score_dialog_str_msg" = "After Level %d:\nScore: %d";
+"score_dialog_str_msg" = "After Level: %d\nScore: %d";
 "score_dialog_str_btn1" = "Yeah!";

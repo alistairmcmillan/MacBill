@@ -97,7 +97,7 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* MacBill-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MacBill-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* MacBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F335DDAA12F5FEE000531FA8 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F335DDAA12F5FEE000531FA8 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F335DDB312F5FEE600531FA8 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Japanese; path = Japanese.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F35EFDAD13230652009A6D3C /* beos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beos.png; sourceTree = "<group>"; };
 		F375677812FE0C9100A41122 /* ahh0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ahh0.wav; path = wavs/ahh0.wav; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 		F3A11AA912F5FDB7002F26FE /* toaster.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = toaster.tiff; sourceTree = "<group>"; };
 		F3A11AAA12F5FDB7002F26FE /* wingdows.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = wingdows.tiff; sourceTree = "<group>"; };
 		F3BECE6A12F5FFD9004309D4 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
-		F3BECE6C12F5FFFC004309D4 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F3BECE6C12F5FFFC004309D4 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
