@@ -1,1 +1,3 @@
 language: objective-c
+xcode_project: MacBill.xcodeproj
+xcode_scheme: MacBill
