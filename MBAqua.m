@@ -45,7 +45,7 @@ static int screensize;
 {
     NSString *strMsg, *strTitle, *strBtn1, *strBtn2;
     NSAlert *alert = [[NSAlert alloc] init];
-    [alert setAlertStyle:NSAlertStyleInformational];
+    [alert setAlertStyle:NSInformationalAlertStyle];
     
     strTitle = NSLocalizedString([name stringByAppendingString:@"_dialog_str_title"], nil);
     strMsg   = NSLocalizedString([name stringByAppendingString:@"_dialog_str_msg"], nil);
