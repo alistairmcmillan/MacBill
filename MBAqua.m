@@ -134,7 +134,7 @@ static int screensize;
 {
 	y += [self aqua_picture_height:pict];
 	[frame lockFocus];
-	[pict->img dissolveToPoint:NSMakePoint(x, y) fraction:1.0];
+    [pict->img drawInRect:NSMakeRect(x, y-pict->img.size.height, pict->img.size.width, pict->img.size.height) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0 respectFlipped:YES hints:nil];
 	[frame unlockFocus];
 }
 
