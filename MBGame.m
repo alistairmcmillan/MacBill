@@ -251,7 +251,7 @@ static int screensize = SCREENSIZE;
 	[MBCable Cable_class_init:self :network :spark :ui];
 	[MBComputer Computer_class_init:self :network :os :ui];
 
-	srandom(time(NULL));
+	srandom((unsigned)time(NULL));
 	[ui UI_make_main_window:screensize];
 	[ui UI_load_picture:"logo" :0 :&logo];
 	[ui UI_load_picture:"icon" :0 :&icon];
