@@ -368,7 +368,6 @@ static int screensize;
 {
     NSAlert* alert;
     if([game Game_state] != 4) { // check whether a game is active
-        NSLog(@"Game is active");
         alert = [self runAlertPanel:@"quit" :YES];
         NSModalResponse ret = [alert runModal];
         if (ret != NSAlertFirstButtonReturn) {
