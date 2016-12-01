@@ -373,11 +373,9 @@ static int screensize;
         if (ret != NSAlertFirstButtonReturn) {
             return NSTerminateCancel;
         }
-        [game Game_quit];
-        return NSTerminateNow;
-    } else {
-        return NSTerminateNow;
     }
+    [game Game_quit];
+    return NSTerminateNow;
 }
 
 
