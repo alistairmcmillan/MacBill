@@ -67,10 +67,13 @@ static int screensize = SCREENSIZE;
 // private
 - (void)draw_logo
 {
+    char str[15];
 	[ui UI_clear];
 	[ui UI_draw:logo
 		:(screensize - [ui UI_picture_width:logo]) / 2
 		:(screensize - [ui UI_picture_height:logo]) / 2];
+    sprintf(str, "Click to start");
+    [ui UI_draw_str:str :167 :screensize/7*5];
 }
 
 - (void)Game_start:(int)newlevel
@@ -133,6 +136,11 @@ static int screensize = SCREENSIZE;
 {
 	int i;
 	[ui UI_set_cursor:defaultcursor];
+
+    if (state == STATE_WAITING) {
+        [self Game_start:1];
+        return;
+    }
 
 	if (state != STATE_PLAYING)
 		return;
