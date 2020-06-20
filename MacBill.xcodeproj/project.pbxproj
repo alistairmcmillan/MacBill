@@ -87,18 +87,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		256AC3F00F4B6AF500CF3369 /* MacBill_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacBill_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		45DFB939249E584C00CEA1D6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		45DFB93A249E584C00CEA1D6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		45DFB93B249E584C00CEA1D6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		45DFB93C249E585700CEA1D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		45DFB93D249E585700CEA1D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		45DFB93F249E585C00CEA1D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* MacBill-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MacBill-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* MacBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F335DDAA12F5FEE000531FA8 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F335DDB312F5FEE600531FA8 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Japanese; path = Japanese.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F35EFDAD13230652009A6D3C /* beos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beos.png; sourceTree = "<group>"; };
 		F375677812FE0C9100A41122 /* ahh0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ahh0.wav; path = wavs/ahh0.wav; sourceTree = "<group>"; };
 		F375678B12FE10B200A41122 /* ahh1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ahh1.wav; path = wavs/ahh1.wav; sourceTree = "<group>"; };
@@ -186,8 +188,6 @@
 		F3A11AA812F5FDB7002F26FE /* suncpu.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = suncpu.tiff; sourceTree = "<group>"; };
 		F3A11AA912F5FDB7002F26FE /* toaster.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = toaster.tiff; sourceTree = "<group>"; };
 		F3A11AAA12F5FDB7002F26FE /* wingdows.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = wingdows.tiff; sourceTree = "<group>"; };
-		F3BECE6A12F5FFD9004309D4 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
-		F3BECE6C12F5FFFC004309D4 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,13 +410,14 @@
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MacBill" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				ja,
+				de,
+				fr,
+				en,
+				Base,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* MacBill */;
 			projectDirPath = "";
@@ -527,8 +528,8 @@
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				089C165DFE840E0CC02AAC07 /* English */,
-				F335DDAA12F5FEE000531FA8 /* Japanese */,
+				45DFB939249E584C00CEA1D6 /* ja */,
+				45DFB93C249E585700CEA1D6 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -536,8 +537,8 @@
 		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1DDD58150DA1D0A300B32029 /* English */,
-				F335DDB312F5FEE600531FA8 /* Japanese */,
+				45DFB93B249E584C00CEA1D6 /* ja */,
+				45DFB93F249E585C00CEA1D6 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -545,8 +546,8 @@
 		F3BECE6912F5FFD9004309D4 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F3BECE6A12F5FFD9004309D4 /* English */,
-				F3BECE6C12F5FFFC004309D4 /* Japanese */,
+				45DFB93A249E584C00CEA1D6 /* ja */,
+				45DFB93D249E585700CEA1D6 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
