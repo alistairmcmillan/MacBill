@@ -224,7 +224,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="495">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
@@ -313,7 +313,7 @@ IV.  得点は総稼働時間に基づきますが、
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="498">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
@@ -411,7 +411,7 @@ DQ
                                     <rect key="frame" x="0.0" y="0.0" width="318" height="174"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
                                         <tableColumn identifier="name" editable="NO" width="134" minWidth="40" maxWidth="1000" id="307">
@@ -422,7 +422,7 @@ DQ
                                             <textFieldCell key="dataCell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" alignment="left" title="9" id="527">
                                                 <font key="font" metaFont="label" size="12"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
@@ -475,7 +475,7 @@ DQ
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="499">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
@@ -503,7 +503,7 @@ DQ
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="500">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
@@ -527,7 +527,7 @@ DQ
                                 <decimal key="minimum" value="1"/>
                                 <decimal key="maximum" value="NaN"/>
                             </numberFormatter>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -536,7 +536,7 @@ DQ
                         <rect key="frame" x="76" y="79" width="185" height="16"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="どのレベルにワープ？" id="502">
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -551,7 +551,7 @@ DQ
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="キャンセル" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="504">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 Gw
 </string>
@@ -578,7 +578,7 @@ Gw
                         <rect key="frame" x="78" y="49" width="170" height="22"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="506">
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -592,7 +592,7 @@ Gw
                         <rect key="frame" x="76" y="79" width="174" height="34"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="508">
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <string key="title">ハイスコアが出ました。
 名前を入力してください：</string>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -604,7 +604,7 @@ Gw
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="505">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
@@ -642,7 +642,7 @@ DQ
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="511">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
@@ -669,7 +669,7 @@ DQ
                         <rect key="frame" x="17" y="217" width="426" height="16"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="フィールドサイズ：" id="512">
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -708,7 +708,7 @@ DQ
                                 <decimal key="minimum" value="400"/>
                                 <decimal key="maximum" value="2000"/>
                             </numberFormatter>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -741,7 +741,7 @@ DQ
                                 <decimal key="minimum" value="100"/>
                                 <decimal key="maximum" value="1000"/>
                             </numberFormatter>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -762,7 +762,7 @@ DQ
                         <rect key="frame" x="17" y="163" width="426" height="16"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="タイマーの間隔：" id="519">
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -771,7 +771,7 @@ DQ
                         <rect key="frame" x="17" y="109" width="426" height="16"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="ドラッグ中の透明度：" id="520">
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -801,7 +801,7 @@ DQ
                                 <decimal key="minimum" value="0"/>
                                 <decimal key="maximum" value="100"/>
                             </numberFormatter>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -832,7 +832,7 @@ DQ
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="525">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
@@ -846,7 +846,7 @@ DQ
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="キャンセル" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="526">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="message"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 Gw
 </string>
