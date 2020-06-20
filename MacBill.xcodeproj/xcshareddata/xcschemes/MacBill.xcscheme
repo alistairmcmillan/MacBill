@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4575F133249E8A5D00C14259"
-               BuildableName = "MacBillUITests.xctest"
-               BlueprintName = "MacBillUITests"
+               BlueprintIdentifier = "4575F141249E959100C14259"
+               BuildableName = "MacBillTests.xctest"
+               BlueprintName = "MacBillTests"
                ReferencedContainer = "container:MacBill.xcodeproj">
             </BuildableReference>
          </TestableReference>

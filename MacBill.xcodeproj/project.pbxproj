@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		4575F137249E8A5D00C14259 /* MacBillUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4575F136249E8A5D00C14259 /* MacBillUITests.m */; };
+		4575F145249E959100C14259 /* MacBillTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4575F144249E959100C14259 /* MacBillTests.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -95,6 +95,13 @@
 			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = MacBill;
 		};
+		4575F147249E959100C14259 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = MacBill;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -105,8 +112,9 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		4575F134249E8A5D00C14259 /* MacBillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacBillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4575F136249E8A5D00C14259 /* MacBillUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacBillUITests.m; sourceTree = "<group>"; };
-		4575F138249E8A5D00C14259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4575F142249E959100C14259 /* MacBillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacBillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4575F144249E959100C14259 /* MacBillTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacBillTests.m; sourceTree = "<group>"; };
+		4575F146249E959100C14259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45DFB939249E584C00CEA1D6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		45DFB93A249E584C00CEA1D6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		45DFB93B249E584C00CEA1D6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -212,6 +220,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4575F13F249E959100C14259 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072E0486CEB800E47090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,6 +294,7 @@
 			children = (
 				8D1107320486CEB800E47090 /* MacBill.app */,
 				4575F134249E8A5D00C14259 /* MacBillUITests.xctest */,
+				4575F142249E959100C14259 /* MacBillTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,7 +305,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
-				4575F135249E8A5D00C14259 /* MacBillUITests */,
+				4575F143249E959100C14259 /* MacBillTests */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -330,13 +346,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4575F135249E8A5D00C14259 /* MacBillUITests */ = {
+		4575F143249E959100C14259 /* MacBillTests */ = {
 			isa = PBXGroup;
 			children = (
-				4575F136249E8A5D00C14259 /* MacBillUITests.m */,
-				4575F138249E8A5D00C14259 /* Info.plist */,
+				4575F144249E959100C14259 /* MacBillTests.m */,
+				4575F146249E959100C14259 /* Info.plist */,
 			);
-			path = MacBillUITests;
+			path = MacBillTests;
 			sourceTree = "<group>";
 		};
 		F375677712FE0C8600A41122 /* wavs */ = {
@@ -432,6 +448,24 @@
 			productReference = 4575F134249E8A5D00C14259 /* MacBillUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		4575F141249E959100C14259 /* MacBillTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4575F149249E959100C14259 /* Build configuration list for PBXNativeTarget "MacBillTests" */;
+			buildPhases = (
+				4575F13E249E959100C14259 /* Sources */,
+				4575F13F249E959100C14259 /* Frameworks */,
+				4575F140249E959100C14259 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4575F148249E959100C14259 /* PBXTargetDependency */,
+			);
+			name = MacBillTests;
+			productName = MacBillTests;
+			productReference = 4575F142249E959100C14259 /* MacBillTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8D1107260486CEB800E47090 /* MacBill */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "MacBill" */;
@@ -463,6 +497,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 8D1107260486CEB800E47090;
 					};
+					4575F141249E959100C14259 = {
+						CreatedOnToolsVersion = 11.5;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8D1107260486CEB800E47090;
+					};
 				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MacBill" */;
@@ -482,12 +521,20 @@
 			targets = (
 				8D1107260486CEB800E47090 /* MacBill */,
 				4575F133249E8A5D00C14259 /* MacBillUITests */,
+				4575F141249E959100C14259 /* MacBillTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4575F132249E8A5D00C14259 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4575F140249E959100C14259 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -570,7 +617,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4575F137249E8A5D00C14259 /* MacBillUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4575F13E249E959100C14259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4575F145249E959100C14259 /* MacBillTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +656,11 @@
 			isa = PBXTargetDependency;
 			target = 8D1107260486CEB800E47090 /* MacBill */;
 			targetProxy = 4575F139249E8A5D00C14259 /* PBXContainerItemProxy */;
+		};
+		4575F148249E959100C14259 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* MacBill */;
+			targetProxy = 4575F147249E959100C14259 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -705,6 +764,80 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cx.mcmillan.MacBillUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = MacBill;
+			};
+			name = Release;
+		};
+		4575F14A249E959100C14259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = MacBillTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = cx.mcmillan.MacBillTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacBill.app/Contents/MacOS/MacBill";
+			};
+			name = Debug;
+		};
+		4575F14B249E959100C14259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = MacBillTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = cx.mcmillan.MacBillTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacBill.app/Contents/MacOS/MacBill";
 			};
 			name = Release;
 		};
@@ -825,6 +958,15 @@
 			buildConfigurations = (
 				4575F13B249E8A5D00C14259 /* Debug */,
 				4575F13C249E8A5D00C14259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4575F149249E959100C14259 /* Build configuration list for PBXNativeTarget "MacBillTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4575F14A249E959100C14259 /* Debug */,
+				4575F14B249E959100C14259 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
