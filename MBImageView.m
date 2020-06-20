@@ -11,7 +11,7 @@ static float transparency = 0.7f;
 {
 	NSPoint p = [theEvent locationInWindow];
 	p = [self convertPoint:p fromView:nil];
-	[aqua aqua_button_press:p.x :(NSHeight(_bounds) - p.y)];
+    [aqua aqua_button_press:p.x :(NSHeight(self.bounds) - p.y)];
 
 	cursor = p;
 	[self setNeedsDisplay:YES];
@@ -21,7 +21,7 @@ static float transparency = 0.7f;
 {
 	NSPoint p = [theEvent locationInWindow];
 	p = [self convertPoint:p fromView:nil];
-	[aqua aqua_button_release:p.x :(NSHeight(_bounds) - p.y)];
+    [aqua aqua_button_release:p.x :(NSHeight(self.bounds) - p.y)];
 }
 
 - (void)mouseDragged:(NSEvent *)theEvent
