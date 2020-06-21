@@ -50,6 +50,8 @@ struct MBPicture {
 - (void)aqua_make_main_window:(int)size;
 - (void)aqua_set_pausebutton:(int)action;
 
+- (void)aqua_audio_play:(const char *)str;
+
 - (IBAction)new_game:(id)sender;
 - (IBAction)pause_game:(id)sender;
 - (IBAction)quit_game:(id)sender;

@@ -223,6 +223,10 @@ static int screensize;
 	menu_pause_enable_flag = (action ? YES : NO);
 }
 
+- (void)aqua_audio_play:(const char *)str
+{
+	[[[NSSound soundNamed:[NSString stringWithUTF8String:str]] copy] play];
+}
 
 - (IBAction)new_game:(id)sender
 {

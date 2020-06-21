@@ -231,6 +231,7 @@ update_at(MBBill *bill) {
 		computer->os = OS_WINGDOWS;
 		[network Network_inc_counter:NETWORK_COUNTER_OFF: -1];
 		[network Network_inc_counter:NETWORK_COUNTER_WIN: 1];
+		[ui UI_audio_play:"mssound"];
 		break;
 	case 12:
 		bill->x += 11;
@@ -360,6 +361,9 @@ update_dying(MBBill *bill) {
 	x_offset = -2;
 	y_offset = -15;
 	state = BILL_STATE_DYING;
+	int r = arc4random_uniform(3);
+	NSString *audioName = [@"ahh" stringByAppendingString:[NSString stringWithFormat:@"%d", r]];
+	[ui UI_audio_play:[audioName cStringUsingEncoding:NSUTF8StringEncoding]];
 }
 
 - (int)Bill_clicked:(int)locx :(int)locy
