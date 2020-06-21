@@ -112,6 +112,11 @@ static int interval = 200;
 	[aqua aqua_load_cursor:name :masked :cursorp];
 }
 
+- (void)UI_audio_play:(const char *)name
+{
+    [aqua aqua_audio_play:name];
+}
+
 - (int)UI_intersect:(int)x1 :(int)y1 :(int)w1 :(int)h1 :(int)x2 :(int)y2 :(int)w2 :(int)h2
 {
 	return ((abs(x2 - x1 + (w2 - w1) / 2) < (w1 + w2) / 2) &&

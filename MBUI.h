@@ -51,6 +51,8 @@
 
 - (int)UI_intersect:(int)x1 :(int)y1 :(int)w1 :(int)h1 :(int)x2 :(int)y2 :(int)w2 :(int)h2;
 
+- (void)UI_audio_play:(const char *)name;
+
 - (const char *)UI_dialog_string:(int)index;
 - (const char *)UI_menu_string:(int)index;
 
