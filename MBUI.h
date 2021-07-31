@@ -32,7 +32,7 @@
 - (void)UI_make_main_window:(int)size;
 
 - (void)UI_popup_dialog:(int)index;
-- (void)UI_set_cursor:(MBMCursor *)cursor;
+- (void)UI_set_cursor:(NSCursor *)cursor;
 - (void)UI_clear;
 - (void)UI_refresh;
 - (void)UI_draw:(NSImage *)picture :(int)x :(int)y;
@@ -47,7 +47,7 @@
 - (int)UI_picture_width:(NSImage *)pict;
 - (int)UI_picture_height:(NSImage *)pict;
 
-- (void)UI_load_cursor:(const char *)name :(int)masked :(MBMCursor **)cursorp;
+- (void)UI_load_cursor:(const char *)name :(int)masked :(NSCursor **)cursorp;
 
 - (int)UI_intersect:(int)x1 :(int)y1 :(int)w1 :(int)h1 :(int)x2 :(int)y2 :(int)w2 :(int)h2;
 

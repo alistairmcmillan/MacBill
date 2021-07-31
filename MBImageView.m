@@ -1,6 +1,5 @@
 #import "MBImageView.h"
 
-#import "MBtypes.h"
 #import "MBAqua.h"
 
 static float transparency = 0.7f;

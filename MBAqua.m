@@ -1,4 +1,3 @@
-#import "MBtypes.h"
 #import "MBAqua.h"
 
 #import "MBGame.h"
@@ -69,10 +68,10 @@ static int screensize;
  * Cursor handling
  */
 
-- (void)aqua_set_cursor:(MBMCursor *)cursor
+- (void)aqua_set_cursor:(NSCursor *)cursor
 {
-	[cursor->cursor set];
-	if ([[[cursor->cursor image] name] compare:@"hand"
+	[cursor set];
+	if ([[[cursor image] name] compare:@"hand"
 			options:NSCaseInsensitiveSearch
 			range:NSMakeRange(0, 4)] == NSOrderedSame) {
 		[NSCursor unhide];
@@ -83,12 +82,12 @@ static int screensize;
 	};
 }
 
-- (void)aqua_load_cursor:(const char *)name :(int)masked :(MBMCursor **)cursorp
+- (void)aqua_load_cursor:(const char *)name :(int)masked :(NSCursor **)cursorp
 {
-	MBMCursor *cursor = malloc(sizeof(MBMCursor));
+	NSCursor *cursor;
 	NSImage *pict;
 	[self aqua_load_picture:name :0 :&pict];
-	cursor->cursor = [[NSCursor alloc] initWithImage:pict
+	cursor = [[NSCursor alloc] initWithImage:pict
 						hotSpot:NSMakePoint([self aqua_picture_width:pict] / 2,
 											[self aqua_picture_height:pict] / 2)];
 	*cursorp = cursor;

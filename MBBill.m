@@ -1,4 +1,3 @@
-#import "MBtypes.h"
 #import "MBBill.h"
 
 #import "MButil.h"

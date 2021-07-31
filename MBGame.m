@@ -1,4 +1,3 @@
-#import "MBtypes.h"
 #import "MBGame.h"
 
 #import "MButil.h"
@@ -30,7 +29,7 @@ static unsigned int state;
 static int efficiency;
 static int score, level, iteration;
 static NSImage *logo, *icon, *about;
-static MBMCursor *defaultcursor, *downcursor;
+static NSCursor *defaultcursor, *downcursor;
 static MBBill *grabbed;
 static int screensize = SCREENSIZE;
 

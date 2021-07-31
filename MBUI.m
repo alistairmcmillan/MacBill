@@ -1,4 +1,3 @@
-#import "MBtypes.h"
 #import "MBUI.h"
 
 #import "MButil.h"
@@ -48,7 +47,7 @@ static int interval = 200;
 	[aqua aqua_popup_dialog:dialog];
 }
 
-- (void)UI_set_cursor:(MBMCursor *)cursor
+- (void)UI_set_cursor:(NSCursor *)cursor
 {
 	[aqua aqua_set_cursor:cursor];
 }
@@ -107,7 +106,7 @@ static int interval = 200;
 	return [aqua aqua_picture_height:pict];
 }
 
-- (void)UI_load_cursor:(const char *)name :(int)masked :(MBMCursor **)cursorp
+- (void)UI_load_cursor:(const char *)name :(int)masked :(NSCursor **)cursorp
 {
 	[aqua aqua_load_cursor:name :masked :cursorp];
 }

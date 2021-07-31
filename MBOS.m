@@ -1,4 +1,3 @@
-#import "MBtypes.h"
 #import "MBOS.h"
 
 #import "MButil.h"
@@ -12,7 +11,7 @@ static const char *osname[] = {"wingdows", "apple", "next", "sgi", "sun",
 #define NUM_OS (sizeof(osname) / sizeof(osname[0]))
 
 static NSImage *os[NUM_OS];		/* array of OS pictures*/
-static MBMCursor *cursor[NUM_OS];		/* array of OS cursors (drag/drop) */
+static NSCursor *cursor[NUM_OS];		/* array of OS cursors (drag/drop) */
 
 @implementation MBOS
 

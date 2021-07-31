@@ -156,7 +156,6 @@
 		F3A11A6212F5FD56002F26FE /* MBSpark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSpark.m; sourceTree = "<group>"; };
 		F3A11A6312F5FD56002F26FE /* MBUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBUI.h; sourceTree = "<group>"; };
 		F3A11A6412F5FD56002F26FE /* MBUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBUI.m; sourceTree = "<group>"; };
-		F3A11A7212F5FD63002F26FE /* MBtypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBtypes.h; sourceTree = "<group>"; };
 		F3A11A7312F5FD63002F26FE /* MButil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MButil.h; sourceTree = "<group>"; };
 		F3A11A7712F5FDB6002F26FE /* about.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = about.tiff; sourceTree = "<group>"; };
 		F3A11A7812F5FDB6002F26FE /* apple.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = apple.tiff; sourceTree = "<group>"; };
@@ -315,7 +314,6 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F3A11A7212F5FD63002F26FE /* MBtypes.h */,
 				F3A11A7312F5FD63002F26FE /* MButil.h */,
 				256AC3F00F4B6AF500CF3369 /* MacBill_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,

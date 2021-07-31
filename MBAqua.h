@@ -2,10 +2,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-struct MBMCursor {
-	NSCursor *cursor;
-};
-
 @interface MBAqua : NSObject
 {
     IBOutlet id game;
@@ -28,8 +24,8 @@ struct MBMCursor {
     IBOutlet id slider_trans;
 }
 
-- (void)aqua_set_cursor:(MBMCursor *)cursor;
-- (void)aqua_load_cursor:(const char *)name :(int)masked :(MBMCursor **)cursorp;
+- (void)aqua_set_cursor:(NSCursor *)cursor;
+- (void)aqua_load_cursor:(const char *)name :(int)masked :(NSCursor **)cursorp;
 - (void)aqua_load_picture:(const char *)name :(int)trans :(NSImage **)pictp;
 - (int)aqua_picture_width:(NSImage *)pict;
 - (int)aqua_picture_height:(NSImage *)pict;

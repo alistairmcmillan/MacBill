@@ -1,4 +1,3 @@
-#import "MBtypes.h"
 #import "MBScorelist.h"
 
 #import "MBUI.h"

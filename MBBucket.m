@@ -1,4 +1,3 @@
-#import "MBtypes.h"
 #import "MBBucket.h"
 
 #import "MButil.h"
@@ -10,7 +9,7 @@
 #import "MBUI.h"
 
 static NSImage *picture;
-static MBMCursor *cursor;
+static NSCursor *cursor;
 static int grabbed;
 
 @implementation MBBucket
