@@ -855,7 +855,6 @@
 				GCC_PREFIX_HEADER = MacBill_Prefix.pch;
 				INFOPLIST_FILE = "MacBill-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "cx.mcmillan.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = MacBill;
 			};
@@ -873,7 +872,6 @@
 				GCC_PREFIX_HEADER = MacBill_Prefix.pch;
 				INFOPLIST_FILE = "MacBill-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "cx.mcmillan.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = MacBill;
 			};

@@ -33,11 +33,11 @@ static float transparency = 0.7f;
 
 - (void)drawRect:(NSRect)rect
 {
-    [subimage drawAtPoint:NSZeroPoint fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
+	[subimage drawAtPoint:NSZeroPoint fromRect:NSZeroRect operation:NSCompositingOperationCopy fraction:1.0];
 	if (drawCursor == YES) {
 		NSImage* img = [[NSCursor currentCursor] image];
 		NSSize size = [img size];
-        [img drawAtPoint:NSMakePoint(cursor.x - size.width / 2, cursor.y - size.height / 2) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:transparency];
+		[img drawAtPoint:NSMakePoint(cursor.x - size.width / 2, cursor.y - size.height / 2) fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:transparency];
 	}
 }
 

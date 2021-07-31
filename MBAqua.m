@@ -45,7 +45,7 @@ static int screensize;
 {
     NSString *strMsg, *strTitle, *strBtn1, *strBtn2;
     NSAlert *alert = [[NSAlert alloc] init];
-    [alert setAlertStyle:NSInformationalAlertStyle];
+	[alert setAlertStyle:NSAlertStyleInformational];
     
     strTitle = NSLocalizedString([name stringByAppendingString:@"_dialog_str_title"], nil);
     strMsg   = NSLocalizedString([name stringByAppendingString:@"_dialog_str_msg"], nil);
@@ -134,7 +134,7 @@ static int screensize;
 {
 	y += [self aqua_picture_height:pict];
 	[frame lockFocus];
-    [pict->img drawInRect:NSMakeRect(x, y-pict->img.size.height, pict->img.size.width, pict->img.size.height) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0 respectFlipped:YES hints:nil];
+	[pict->img drawInRect:NSMakeRect(x, y-pict->img.size.height, pict->img.size.width, pict->img.size.height) fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1.0 respectFlipped:YES hints:nil];
 	[frame unlockFocus];
 }
 
