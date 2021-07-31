@@ -21,7 +21,7 @@
 #define DCELS 5                 /* # of bill dying animation frames */
 #define ACELS 13                /* # of bill switching OS frames */
 
-static MBPicture *lcels[WCELS], *rcels[WCELS], *acels[ACELS], *dcels[DCELS];
+static NSImage *lcels[WCELS], *rcels[WCELS], *acels[ACELS], *dcels[DCELS];
 static int width, height;
 
 static MBGame *game;

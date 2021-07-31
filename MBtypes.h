@@ -7,5 +7,4 @@
  *
  */
 
-typedef struct MBPicture MBPicture;
 typedef struct MBMCursor MBMCursor;

@@ -5,7 +5,7 @@
 
 #import "MBUI.h"
 
-static MBPicture *pictures[2];
+static NSImage *pictures[2];
 
 @implementation MBSpark
 

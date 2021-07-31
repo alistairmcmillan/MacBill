@@ -63,7 +63,7 @@ static int interval = 200;
 	[aqua aqua_refresh_window];
 }
 
-- (void)UI_draw:(MBPicture *)pict :(int)x :(int)y
+- (void)UI_draw:(NSImage *)pict :(int)x :(int)y
 {
 	[aqua aqua_draw_image:pict :x :y];
 }
@@ -83,7 +83,7 @@ static int interval = 200;
 	[aqua aqua_set_pausebutton:action];
 }
 
-- (void)UI_load_picture_indexed:(const char *)name :(int)index :(int)trans :(MBPicture **)pictp
+- (void)UI_load_picture_indexed:(const char *)name :(int)index :(int)trans :(NSImage **)pictp
 {
 	char *newname;
 	newname = malloc(strlen(name) + 4);
@@ -92,17 +92,17 @@ static int interval = 200;
 	free(newname);
 }
 
-- (void)UI_load_picture:(const char *)name :(int)trans :(MBPicture **)pictp
+- (void)UI_load_picture:(const char *)name :(int)trans :(NSImage **)pictp
 {
 	[aqua aqua_load_picture:name :trans :pictp];
 }
 
-- (int)UI_picture_width:(MBPicture *)pict
+- (int)UI_picture_width:(NSImage *)pict
 {
 	return [aqua aqua_picture_width:pict];
 }
 
-- (int)UI_picture_height:(MBPicture *)pict
+- (int)UI_picture_height:(NSImage *)pict
 {
 	return [aqua aqua_picture_height:pict];
 }

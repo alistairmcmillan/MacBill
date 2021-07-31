@@ -26,7 +26,7 @@ static const char *cpuname[] = {"toaster", "maccpu", "nextcpu", "sgicpu",
 
 #define NUM_SYS (sizeof(cpuname) / sizeof(cpuname[0]))
 
-static MBPicture *pictures[NUM_SYS];		/* array of cpu pictures */
+static NSImage *pictures[NUM_SYS];		/* array of cpu pictures */
 static int width, height;
 
 static int

@@ -11,7 +11,7 @@ static const char *osname[] = {"wingdows", "apple", "next", "sgi", "sun",
 			       "palm", "os2", "bsd", "linux", "redhat", "hurd", "beos"};
 #define NUM_OS (sizeof(osname) / sizeof(osname[0]))
 
-static MBPicture *os[NUM_OS];		/* array of OS pictures*/
+static NSImage *os[NUM_OS];		/* array of OS pictures*/
 static MBMCursor *cursor[NUM_OS];		/* array of OS cursors (drag/drop) */
 
 @implementation MBOS

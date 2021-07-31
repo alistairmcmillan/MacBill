@@ -18,7 +18,7 @@
 @public
 	int state;		/* what is it doing? */
 	int index;		/* index of animation frame */
-	MBPicture **cels;		/* array of animation frames */
+	NSImage **cels;		/* array of animation frames */
 	int x, y;		/* location */
 	int target_x;		/* target x position */
 	int target_y;		/* target y position */

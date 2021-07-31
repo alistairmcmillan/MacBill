@@ -29,7 +29,7 @@
 static unsigned int state;
 static int efficiency;
 static int score, level, iteration;
-static MBPicture *logo, *icon, *about;
+static NSImage *logo, *icon, *about;
 static MBMCursor *defaultcursor, *downcursor;
 static MBBill *grabbed;
 static int screensize = SCREENSIZE;

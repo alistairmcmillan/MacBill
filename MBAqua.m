@@ -86,9 +86,9 @@ static int screensize;
 - (void)aqua_load_cursor:(const char *)name :(int)masked :(MBMCursor **)cursorp
 {
 	MBMCursor *cursor = malloc(sizeof(MBMCursor));
-	MBPicture *pict;
+	NSImage *pict;
 	[self aqua_load_picture:name :0 :&pict];
-	cursor->cursor = [[NSCursor alloc] initWithImage:pict->img
+	cursor->cursor = [[NSCursor alloc] initWithImage:pict
 						hotSpot:NSMakePoint([self aqua_picture_width:pict] / 2,
 											[self aqua_picture_height:pict] / 2)];
 	*cursorp = cursor;
@@ -98,22 +98,22 @@ static int screensize;
  * Pixmap handling
  */
 
-- (void)aqua_load_picture:(const char *)name :(int)trans :(MBPicture **)pictp
+- (void)aqua_load_picture:(const char *)name :(int)trans :(NSImage **)pictp
 {
-	MBPicture *pict = malloc(sizeof(MBPicture));
+	NSImage *pict;
 	NSString *s = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
-	pict->img = [NSImage imageNamed:s];
+	pict = [NSImage imageNamed:s];
 	*pictp = pict;
 }
 
-- (int)aqua_picture_width:(MBPicture *)pict
+- (int)aqua_picture_width:(NSImage *)pict
 {
-	return [pict->img size].width;
+	return [pict size].width;
 }
 
-- (int)aqua_picture_height:(MBPicture *)pict
+- (int)aqua_picture_height:(NSImage *)pict
 {
-	return [pict->img size].height;
+	return [pict size].height;
 }
 
 - (void)aqua_clear_window
@@ -130,11 +130,11 @@ static int screensize;
 	[view setNeedsDisplay:YES];
 }
 
-- (void)aqua_draw_image:(MBPicture *)pict :(int)x :(int)y
+- (void)aqua_draw_image:(NSImage *)pict :(int)x :(int)y
 {
 	y += [self aqua_picture_height:pict];
 	[frame lockFocus];
-	[pict->img drawInRect:NSMakeRect(x, y-pict->img.size.height, pict->img.size.width, pict->img.size.height) fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1.0 respectFlipped:YES hints:nil];
+	[pict drawInRect:NSMakeRect(x, y-pict.size.height, pict.size.width, pict.size.height) fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1.0 respectFlipped:YES hints:nil];
 	[frame unlockFocus];
 }
 

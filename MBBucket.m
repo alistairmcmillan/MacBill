@@ -9,7 +9,7 @@
 #import "MBNetwork.h"
 #import "MBUI.h"
 
-static MBPicture *picture;
+static NSImage *picture;
 static MBMCursor *cursor;
 static int grabbed;
 

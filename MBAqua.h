@@ -6,10 +6,6 @@ struct MBMCursor {
 	NSCursor *cursor;
 };
 
-struct MBPicture {
-	NSImage *img;
-};
-
 @interface MBAqua : NSObject
 {
     IBOutlet id game;
@@ -34,12 +30,12 @@ struct MBPicture {
 
 - (void)aqua_set_cursor:(MBMCursor *)cursor;
 - (void)aqua_load_cursor:(const char *)name :(int)masked :(MBMCursor **)cursorp;
-- (void)aqua_load_picture:(const char *)name :(int)trans :(MBPicture **)pictp;
-- (int)aqua_picture_width:(MBPicture *)pict;
-- (int)aqua_picture_height:(MBPicture *)pict;
+- (void)aqua_load_picture:(const char *)name :(int)trans :(NSImage **)pictp;
+- (int)aqua_picture_width:(NSImage *)pict;
+- (int)aqua_picture_height:(NSImage *)pict;
 - (void)aqua_clear_window;
 - (void)aqua_refresh_window;
-- (void)aqua_draw_image:(MBPicture *)pict :(int)x :(int)y;
+- (void)aqua_draw_image:(NSImage *)pict :(int)x :(int)y;
 - (void)aqua_draw_line:(int)x1 :(int)y1 :(int)x2 :(int)y2;
 - (void)aqua_draw_string:(const char *)str :(int)x :(int)y;
 - (void)aqua_start_timer:(int)ms;

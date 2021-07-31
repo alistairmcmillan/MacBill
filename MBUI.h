@@ -35,17 +35,17 @@
 - (void)UI_set_cursor:(MBMCursor *)cursor;
 - (void)UI_clear;
 - (void)UI_refresh;
-- (void)UI_draw:(MBPicture *)picture :(int)x :(int)y;
+- (void)UI_draw:(NSImage *)picture :(int)x :(int)y;
 - (void)UI_draw_line:(int)x1 :(int)y1 :(int)x2 :(int)y2;
 - (void)UI_draw_str:(const char *)str :(int)x :(int)y;
 
 - (void)UI_set_pausebutton:(int)action;
 
-- (void)UI_load_picture:(const char *)name :(int)trans :(MBPicture **)pictp;
+- (void)UI_load_picture:(const char *)name :(int)trans :(NSImage **)pictp;
 - (void)UI_load_picture_indexed:(const char *)name :(int)index :(int)trans
-			     :(MBPicture **)pictp;
-- (int)UI_picture_width:(MBPicture *)pict;
-- (int)UI_picture_height:(MBPicture *)pict;
+			     :(NSImage **)pictp;
+- (int)UI_picture_width:(NSImage *)pict;
+- (int)UI_picture_height:(NSImage *)pict;
 
 - (void)UI_load_cursor:(const char *)name :(int)masked :(MBMCursor **)cursorp;
 
