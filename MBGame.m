@@ -3,7 +3,6 @@
 #import "MButil.h"
 
 #import "MBBill.h"
-#import "MBBucket.h"
 #import "MBComputer.h"
 #import "MBCable.h"
 #import "MBHorde.h"
@@ -11,6 +10,7 @@
 #import "MBOS.h"
 #import "MBScorelist.h"
 #import "MBUI.h"
+#import "MacBill-Swift.h"
 
 #define SCREENSIZE 400
 
@@ -115,8 +115,8 @@ static int screensize = SCREENSIZE;
 		return;
 	[ui UI_set_cursor:downcursor];
 
-	if ([bucket Bucket_clicked:x :y]) {
-		[bucket Bucket_grab:x :y];
+	if ([bucket Bucket_clickedWithX:x y:y]) {
+		[bucket Bucket_grabWithX:x y:y];
 		return;
 	}
 
@@ -144,7 +144,7 @@ static int screensize = SCREENSIZE;
 		return;
 
 	if (grabbed == NULL) {
-		[bucket Bucket_release:x :y];
+		[bucket Bucket_releaseWithX:x y:y];
 		return;
 	}
 
@@ -274,7 +274,6 @@ static int screensize = SCREENSIZE;
 	[MBBill Bill_load_pix];
 	[os OS_load_pix];
 	[MBComputer Computer_load_pix];
-	[bucket Bucket_load_pix];
 
 	state = STATE_WAITING;
 	[ui UI_set_pausebutton:0];

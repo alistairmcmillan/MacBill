@@ -8,8 +8,8 @@
 #import "MBGame.h"
 #import "MBNetwork.h"
 #import "MBOS.h"
-#import "MacBill-Swift.h"
 #import "MBUI.h"
+#import "MacBill-Swift.h"
 
 static MBGame *game;
 static MBNetwork *network;

@@ -10,6 +10,7 @@
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		4575F145249E959100C14259 /* MacBillTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4575F144249E959100C14259 /* MacBillTests.m */; };
 		45A9D62026B61AF1004805E1 /* MBSpark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9D61F26B61AF1004805E1 /* MBSpark.swift */; };
+		45A9D62226B6C9CF004805E1 /* MBBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9D62126B6C9CF004805E1 /* MBBucket.swift */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -22,7 +23,6 @@
 		F3A11A3112F5FCA2002F26FE /* MacBill.icns in Resources */ = {isa = PBXBuildFile; fileRef = F3A11A3012F5FCA2002F26FE /* MacBill.icns */; };
 		F3A11A6512F5FD56002F26FE /* MBAqua.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A4C12F5FD55002F26FE /* MBAqua.m */; };
 		F3A11A6612F5FD56002F26FE /* MBBill.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A4E12F5FD55002F26FE /* MBBill.m */; };
-		F3A11A6712F5FD56002F26FE /* MBBucket.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A5012F5FD55002F26FE /* MBBucket.m */; };
 		F3A11A6812F5FD56002F26FE /* MBCable.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A5212F5FD55002F26FE /* MBCable.m */; };
 		F3A11A6912F5FD56002F26FE /* MBComputer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A5412F5FD55002F26FE /* MBComputer.m */; };
 		F3A11A6A12F5FD56002F26FE /* MBGame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A5612F5FD55002F26FE /* MBGame.m */; };
@@ -117,6 +117,7 @@
 		4575F146249E959100C14259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45A9D61E26B61AF1004805E1 /* MacBill-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacBill-Bridging-Header.h"; sourceTree = "<group>"; };
 		45A9D61F26B61AF1004805E1 /* MBSpark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBSpark.swift; sourceTree = "<group>"; };
+		45A9D62126B6C9CF004805E1 /* MBBucket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBBucket.swift; sourceTree = "<group>"; };
 		45DFB939249E584C00CEA1D6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		45DFB93A249E584C00CEA1D6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		45DFB93B249E584C00CEA1D6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -136,8 +137,6 @@
 		F3A11A4C12F5FD55002F26FE /* MBAqua.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAqua.m; sourceTree = "<group>"; };
 		F3A11A4D12F5FD55002F26FE /* MBBill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBill.h; sourceTree = "<group>"; };
 		F3A11A4E12F5FD55002F26FE /* MBBill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBill.m; sourceTree = "<group>"; };
-		F3A11A4F12F5FD55002F26FE /* MBBucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBucket.h; sourceTree = "<group>"; };
-		F3A11A5012F5FD55002F26FE /* MBBucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBucket.m; sourceTree = "<group>"; };
 		F3A11A5112F5FD55002F26FE /* MBCable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCable.h; sourceTree = "<group>"; };
 		F3A11A5212F5FD55002F26FE /* MBCable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBCable.m; sourceTree = "<group>"; };
 		F3A11A5312F5FD55002F26FE /* MBComputer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBComputer.h; sourceTree = "<group>"; };
@@ -244,8 +243,7 @@
 				F3A11A4C12F5FD55002F26FE /* MBAqua.m */,
 				F3A11A4D12F5FD55002F26FE /* MBBill.h */,
 				F3A11A4E12F5FD55002F26FE /* MBBill.m */,
-				F3A11A4F12F5FD55002F26FE /* MBBucket.h */,
-				F3A11A5012F5FD55002F26FE /* MBBucket.m */,
+				45A9D62126B6C9CF004805E1 /* MBBucket.swift */,
 				F3A11A5112F5FD55002F26FE /* MBCable.h */,
 				F3A11A5212F5FD55002F26FE /* MBCable.m */,
 				F3A11A5312F5FD55002F26FE /* MBComputer.h */,
@@ -636,9 +634,9 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				F3A11A6512F5FD56002F26FE /* MBAqua.m in Sources */,
 				F3A11A6612F5FD56002F26FE /* MBBill.m in Sources */,
-				F3A11A6712F5FD56002F26FE /* MBBucket.m in Sources */,
 				F3A11A6812F5FD56002F26FE /* MBCable.m in Sources */,
 				F3A11A6912F5FD56002F26FE /* MBComputer.m in Sources */,
+				45A9D62226B6C9CF004805E1 /* MBBucket.swift in Sources */,
 				F3A11A6A12F5FD56002F26FE /* MBGame.m in Sources */,
 				F3A11A6B12F5FD56002F26FE /* MBHorde.m in Sources */,
 				F3A11A6C12F5FD56002F26FE /* MBImageView.m in Sources */,
