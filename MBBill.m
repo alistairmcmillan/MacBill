@@ -6,8 +6,8 @@
 #import "MBGame.h"
 #import "MBHorde.h"
 #import "MBNetwork.h"
-#import "MBOS.h"
 #import "MBUI.h"
+#import "MacBill-Swift.h"
 
 /* speed at which OS drops */
 #define GRAVITY 3
@@ -97,8 +97,7 @@ move(MBBill *bill, int mode) {
 static void
 draw_std(MBBill *bill) {
 	if (bill->cargo >= 0)
-		[os OS_draw:bill->cargo :bill->x + bill->x_offset
-			:bill->y + bill->y_offset];
+		[os OS_drawWithIndex:bill->cargo x:bill->x + bill->x_offset y:bill->y + bill->y_offset];
 	[ui UI_draw:bill->cels[bill->index] :bill->x :bill->y];
 }
 
@@ -106,16 +105,15 @@ static void
 draw_at(MBBill *bill) {
 	MBComputer *computer = [network Network_get_computer:bill->target_c];
 	if (bill->index > 6 && bill->index < 12)
-		[os OS_draw:0 :bill->x + bill->sx :bill->y + bill->sy];
+		[os OS_drawWithIndex:0 x:bill->x + bill->sx y:bill->y + bill->sy];
 	if (bill->cargo >= 0)
-		[os OS_draw:bill->cargo :bill->x + bill->x_offset
-			:bill->y + bill->y_offset];
+		[os OS_drawWithIndex:bill->cargo x:bill->x + bill->x_offset y:bill->y + bill->y_offset];
 	[ui UI_draw:bill->cels[bill->index] :computer->x :computer->y];
 }
 
 static void
 draw_stray(MBBill *bill) {
-	[os OS_draw:bill->cargo :bill->x :bill->y];
+	[os OS_drawWithIndex:bill->cargo x:bill->x y:bill->y];
 }
 
 /*  Update Bill's position */	
@@ -123,7 +121,7 @@ static void
 update_in(MBBill *bill) {
 	int moved = move(bill, SLOW);
 	MBComputer *computer = [network Network_get_computer:bill->target_c];
-	if (!moved && computer->os != OS_WINGDOWS && !computer->busy) {
+	if (!moved && computer->os != MBOS.OS_WINGDOWS && !computer->busy) {
 		computer->busy = 1;
 		bill->cels = acels;
 		bill->index = 0;
@@ -149,7 +147,7 @@ update_in(MBBill *bill) {
 static void
 update_at(MBBill *bill) {
 	MBComputer *computer = [network Network_get_computer:bill->target_c];
-	if (bill->index == 0 && computer->os == OS_OFF) {
+	if (bill->index == 0 && computer->os == MBOS.OS_OFF) {
 		bill->index = 6;
 		if (computer->stray == NULL)
 			bill->cargo = -1;
@@ -190,7 +188,7 @@ update_at(MBBill *bill) {
 		bill->x_offset -=2;
 		break;
 	case 6:
-		if (computer->os != OS_OFF) {
+		if (computer->os != MBOS.OS_OFF) {
 			[network Network_inc_counter:NETWORK_COUNTER_BASE: -1];
 			[network Network_inc_counter:NETWORK_COUNTER_OFF: 1];
 			bill->cargo = computer->os;
@@ -199,7 +197,7 @@ update_at(MBBill *bill) {
 			bill->x -= 21;
 			bill->x_offset += 21;
 		}
-		computer->os = OS_OFF;
+		computer->os = MBOS.OS_OFF;
 		bill->y_offset = -15;
 		bill->x += 20;
 		bill->x_offset -=20;
@@ -227,7 +225,7 @@ update_at(MBBill *bill) {
 	case 11:
 		bill->sy = 0;
 		bill->sx = -7;
-		computer->os = OS_WINGDOWS;
+		computer->os = MBOS.OS_WINGDOWS;
 		[network Network_inc_counter:NETWORK_COUNTER_OFF: -1];
 		[network Network_inc_counter:NETWORK_COUNTER_WIN: 1];
 		[ui UI_audio_play:"mssound"];
@@ -267,7 +265,7 @@ update_dying(MBBill *bill) {
 	}
 	else {
 		bill->y += bill->y_offset;
-		if (bill->cargo < 0 || bill->cargo == OS_WINGDOWS)
+		if (bill->cargo < 0 || bill->cargo == MBOS.OS_WINGDOWS)
 			[horde Horde_remove_bill:bill];
 		else {
 			[horde Horde_move_bill:bill];
@@ -300,7 +298,7 @@ update_dying(MBBill *bill) {
 	get_border(&bill->x, &bill->y);
 	bill->index = 0;
 	bill->cels = lcels;
-	bill->cargo = OS_WINGDOWS;
+	bill->cargo = MBOS.OS_WINGDOWS;
 	bill->x_offset = -2;
 	bill->y_offset = -15;
 	bill->target_c = RAND(0, [network Network_num_computers] - 1);

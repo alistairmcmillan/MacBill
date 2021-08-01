@@ -7,7 +7,6 @@
 #import "MBCable.h"
 #import "MBHorde.h"
 #import "MBNetwork.h"
-#import "MBOS.h"
 #import "MBScorelist.h"
 #import "MBUI.h"
 #import "MacBill-Swift.h"
@@ -122,7 +121,7 @@ static int screensize = SCREENSIZE;
 
 	grabbed = [horde Horde_clicked_stray:x :y];
 	if (grabbed != NULL) {
-		[os OS_set_cursor:grabbed->cargo];
+		[os OS_set_cursorWithIndex:grabbed->cargo];
 		return;
 	}
 
@@ -153,11 +152,11 @@ static int screensize = SCREENSIZE;
 
 		if ([computer Computer_on:x :y] &&
 		    [computer Computer_compatible:grabbed->cargo] &&
-		    (computer->os == OS_WINGDOWS || computer->os == OS_OFF)) {
+		    (computer->os == MBOS.OS_WINGDOWS || computer->os == MBOS.OS_OFF)) {
 			int counter;
 
 			[network Network_inc_counter:NETWORK_COUNTER_BASE :1];
-			if (computer->os == OS_WINGDOWS)
+			if (computer->os == MBOS.OS_WINGDOWS)
 				counter = NETWORK_COUNTER_WIN;
 			else
 				counter = NETWORK_COUNTER_OFF;
@@ -272,7 +271,6 @@ static int screensize = SCREENSIZE;
 	[ui UI_set_cursor:defaultcursor];
 
 	[MBBill Bill_load_pix];
-	[os OS_load_pix];
 	[MBComputer Computer_load_pix];
 
 	state = STATE_WAITING;

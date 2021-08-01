@@ -6,7 +6,7 @@
 #import "MBCable.h"
 #import "MBComputer.h"
 #import "MBGame.h"
-#import "MBOS.h"
+#import "MacBill-Swift.h"
 
 #define STD_MAX_COMPUTERS 20
 
@@ -81,7 +81,7 @@ static int counters[NETWORK_COUNTER_MAX + 1]; 	/* number in each state */
 	int i;
 	for (i = 0; i < ncomputers; i++) {
 		((MBComputer *)[computers objectAtIndex:i])->type = COMPUTER_TOASTER;
-		((MBComputer *)[computers objectAtIndex:i])->os = OS_OFF;
+		((MBComputer *)[computers objectAtIndex:i])->os = MBOS.OS_OFF;
 	}
 	ncables = 0;
 }

@@ -7,8 +7,8 @@
 #import "MBHorde.h"
 #import "MBNetwork.h"
 #import "MBGame.h"
-#import "MBOS.h"
 #import "MBUI.h"
+#import "MacBill-Swift.h"
 
 static MBGame *game;
 static MBNetwork *network;
@@ -89,15 +89,14 @@ determineOS(MBComputer *computer) {
 - (int)Computer_compatible:(int)system
 {
 	return (type == system ||
-		(type >= MIN_PC && [Os OS_ispc:system]));
+		(type >= MIN_PC && [Os OS_ispcWithIndex:system]));
 }
 
 - (void)Computer_draw
 {
 	[ui UI_draw:pictures[type] :x :y];
-	if (os != OS_OFF)
-		[Os OS_draw:os
-			:x + OS_OFFSET :y + OS_OFFSET];
+	if (os != MBOS.OS_OFF)
+		[Os OS_drawWithIndex:os x:x + OS_OFFSET y:y + OS_OFFSET];
 }
 
 + (void)Computer_load_pix

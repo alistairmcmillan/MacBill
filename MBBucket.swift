@@ -2,7 +2,8 @@
 //  MBBucket.swift
 //  MacBill
 //
-//  Created by Alistair McMillan on 01/08/2021.
+//  Created by Ishioka Hiroshi on Sun Dec 16 2001.
+//  Swift port by Alistair McMillan on 01/08/2021.
 //
 
 import Foundation

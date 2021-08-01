@@ -7,7 +7,6 @@
 #import "MBComputer.h"
 #import "MBGame.h"
 #import "MBNetwork.h"
-#import "MBOS.h"
 #import "MBUI.h"
 #import "MacBill-Swift.h"
 
@@ -80,13 +79,13 @@ reverse(MBCable *cable) {
 	comp2 = [network Network_get_computer:c2];
 
 	if (active) {
-		if ((comp1->os == OS_WINGDOWS) == (comp2->os == OS_WINGDOWS))
+		if ((comp1->os == MBOS.OS_WINGDOWS) == (comp2->os == MBOS.OS_WINGDOWS))
 			active = 0;
-		else if (comp1->os == OS_WINGDOWS || comp2->os == OS_WINGDOWS) {
+		else if (comp1->os == MBOS.OS_WINGDOWS || comp2->os == MBOS.OS_WINGDOWS) {
 			int xdist, ydist;
 			float sx, sy;
 
-			if (comp2->os == OS_WINGDOWS)
+			if (comp2->os == MBOS.OS_WINGDOWS)
 				reverse(self);
 
 			xdist = x2 - x;
@@ -99,14 +98,14 @@ reverse(MBCable *cable) {
 			if (xdist == 0 && ydist == 0) {
 				if (!comp2->busy) {
 					int counter;
-					if (comp2->os == OS_OFF)
+					if (comp2->os == MBOS.OS_OFF)
 						counter = NETWORK_COUNTER_OFF;
 					else
 						counter = NETWORK_COUNTER_BASE;
 					[network Network_inc_counter:counter :-1];
 					[network Network_inc_counter:NETWORK_COUNTER_WIN
 							    :1];
-					comp2->os = OS_WINGDOWS;
+					comp2->os = MBOS.OS_WINGDOWS;
 				}
 				active = 0;
 			}
@@ -124,12 +123,12 @@ reverse(MBCable *cable) {
 		}
 	}
 	else {
-		if ((comp1->os == OS_WINGDOWS) == (comp2->os == OS_WINGDOWS))
+		if ((comp1->os == MBOS.OS_WINGDOWS) == (comp2->os == MBOS.OS_WINGDOWS))
 			;
-		else if (comp1->os == OS_WINGDOWS || comp2->os == OS_WINGDOWS) {
+		else if (comp1->os == MBOS.OS_WINGDOWS || comp2->os == MBOS.OS_WINGDOWS) {
 			active = 1;
 			delay = [spark SPARK_DELAYWithLevel:[game Game_level]];
-			if (comp2->os == OS_WINGDOWS)
+			if (comp2->os == MBOS.OS_WINGDOWS)
 				reverse(self);
 			x = x1;
 			fx = x1;
