@@ -10,7 +10,6 @@
 #import "MBNetwork.h"
 #import "MBOS.h"
 #import "MBScorelist.h"
-#import "MBSpark.h"
 #import "MBUI.h"
 
 #define SCREENSIZE 400
@@ -276,7 +275,6 @@ static int screensize = SCREENSIZE;
 	[os OS_load_pix];
 	[MBComputer Computer_load_pix];
 	[bucket Bucket_load_pix];
-	[spark Spark_load_pix];
 
 	state = STATE_WAITING;
 	[ui UI_set_pausebutton:0];

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		4575F145249E959100C14259 /* MacBillTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4575F144249E959100C14259 /* MacBillTests.m */; };
+		45A9D62026B61AF1004805E1 /* MBSpark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9D61F26B61AF1004805E1 /* MBSpark.swift */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -30,7 +31,6 @@
 		F3A11A6D12F5FD56002F26FE /* MBNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A5C12F5FD56002F26FE /* MBNetwork.m */; };
 		F3A11A6E12F5FD56002F26FE /* MBOS.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A5E12F5FD56002F26FE /* MBOS.m */; };
 		F3A11A6F12F5FD56002F26FE /* MBScorelist.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A6012F5FD56002F26FE /* MBScorelist.m */; };
-		F3A11A7012F5FD56002F26FE /* MBSpark.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A6212F5FD56002F26FE /* MBSpark.m */; };
 		F3A11A7112F5FD56002F26FE /* MBUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A6412F5FD56002F26FE /* MBUI.m */; };
 		F3A11AAB12F5FDB7002F26FE /* about.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F3A11A7712F5FDB6002F26FE /* about.tiff */; };
 		F3A11AAC12F5FDB7002F26FE /* apple.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F3A11A7812F5FDB6002F26FE /* apple.tiff */; };
@@ -115,6 +115,8 @@
 		4575F142249E959100C14259 /* MacBillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacBillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4575F144249E959100C14259 /* MacBillTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacBillTests.m; sourceTree = "<group>"; };
 		4575F146249E959100C14259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45A9D61E26B61AF1004805E1 /* MacBill-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacBill-Bridging-Header.h"; sourceTree = "<group>"; };
+		45A9D61F26B61AF1004805E1 /* MBSpark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBSpark.swift; sourceTree = "<group>"; };
 		45DFB939249E584C00CEA1D6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		45DFB93A249E584C00CEA1D6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		45DFB93B249E584C00CEA1D6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -152,8 +154,6 @@
 		F3A11A5E12F5FD56002F26FE /* MBOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBOS.m; sourceTree = "<group>"; };
 		F3A11A5F12F5FD56002F26FE /* MBScorelist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBScorelist.h; sourceTree = "<group>"; };
 		F3A11A6012F5FD56002F26FE /* MBScorelist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBScorelist.m; sourceTree = "<group>"; };
-		F3A11A6112F5FD56002F26FE /* MBSpark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSpark.h; sourceTree = "<group>"; };
-		F3A11A6212F5FD56002F26FE /* MBSpark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSpark.m; sourceTree = "<group>"; };
 		F3A11A6312F5FD56002F26FE /* MBUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBUI.h; sourceTree = "<group>"; };
 		F3A11A6412F5FD56002F26FE /* MBUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBUI.m; sourceTree = "<group>"; };
 		F3A11A7312F5FD63002F26FE /* MButil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MButil.h; sourceTree = "<group>"; };
@@ -262,10 +262,10 @@
 				F3A11A5E12F5FD56002F26FE /* MBOS.m */,
 				F3A11A5F12F5FD56002F26FE /* MBScorelist.h */,
 				F3A11A6012F5FD56002F26FE /* MBScorelist.m */,
-				F3A11A6112F5FD56002F26FE /* MBSpark.h */,
-				F3A11A6212F5FD56002F26FE /* MBSpark.m */,
+				45A9D61F26B61AF1004805E1 /* MBSpark.swift */,
 				F3A11A6312F5FD56002F26FE /* MBUI.h */,
 				F3A11A6412F5FD56002F26FE /* MBUI.m */,
+				45A9D61E26B61AF1004805E1 /* MacBill-Bridging-Header.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -500,6 +500,9 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 8D1107260486CEB800E47090;
 					};
+					8D1107260486CEB800E47090 = {
+						LastSwiftMigration = 1250;
+					};
 				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MacBill" */;
@@ -642,7 +645,7 @@
 				F3A11A6D12F5FD56002F26FE /* MBNetwork.m in Sources */,
 				F3A11A6E12F5FD56002F26FE /* MBOS.m in Sources */,
 				F3A11A6F12F5FD56002F26FE /* MBScorelist.m in Sources */,
-				F3A11A7012F5FD56002F26FE /* MBSpark.m in Sources */,
+				45A9D62026B61AF1004805E1 /* MBSpark.swift in Sources */,
 				F3A11A7112F5FD56002F26FE /* MBUI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,6 +699,7 @@
 		4575F13B249E8A5D00C14259 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -734,6 +738,7 @@
 		4575F13C249E8A5D00C14259 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -768,6 +773,7 @@
 		4575F14A249E959100C14259 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -807,6 +813,7 @@
 		4575F14B249E959100C14259 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -843,6 +850,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -853,9 +861,13 @@
 				GCC_PREFIX_HEADER = MacBill_Prefix.pch;
 				INFOPLIST_FILE = "MacBill-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "cx.mcmillan.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = MacBill;
+				SWIFT_OBJC_BRIDGING_HEADER = "MacBill-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -863,6 +875,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -871,9 +884,12 @@
 				GCC_PREFIX_HEADER = MacBill_Prefix.pch;
 				INFOPLIST_FILE = "MacBill-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "cx.mcmillan.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = MacBill;
+				SWIFT_OBJC_BRIDGING_HEADER = "MacBill-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

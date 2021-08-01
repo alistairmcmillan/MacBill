@@ -8,7 +8,7 @@
 #import "MBGame.h"
 #import "MBNetwork.h"
 #import "MBOS.h"
-#import "MBSpark.h"
+#import "MacBill-Swift.h"
 #import "MBUI.h"
 
 static MBGame *game;
@@ -49,7 +49,7 @@ reverse(MBCable *cable) {
 	} while (cable->c2 == cable->c1);
 	cable->active = 0;
 	cable->index = 0;
-	cable->delay = SPARK_DELAY([game Game_level]);
+	cable->delay = [spark SPARK_DELAYWithLevel:[game Game_level]];
 
 	comp1 = [network Network_get_computer:cable->c1];
 	comp2 = [network Network_get_computer:cable->c2];
@@ -69,7 +69,7 @@ reverse(MBCable *cable) {
 	if (active) {
 		int rx = x - [spark Spark_width]/2;
 		int ry = y - [spark Spark_height]/2;
-		[spark Spark_draw:rx :ry :index];
+		[spark Spark_drawWithX:rx y:ry index:index];
 	}
 }
 
@@ -110,13 +110,13 @@ reverse(MBCable *cable) {
 				}
 				active = 0;
 			}
-			else if (MAX(xdist, ydist) < SPARK_SPEED) {
+			else if (MAX(xdist, ydist) < spark.SPARK_SPEED) {
 				x = x2;
 				y = y2;
 			}
 			else {
-				fx+=(xdist*SPARK_SPEED*sx)/(xdist+ydist);
-				fy+=(ydist*SPARK_SPEED*sy)/(xdist+ydist);
+				fx+=(xdist*spark.SPARK_SPEED*sx)/(xdist+ydist);
+				fy+=(ydist*spark.SPARK_SPEED*sy)/(xdist+ydist);
 				x = (int)fx;
 				y = (int)fy;
 			}
@@ -128,7 +128,7 @@ reverse(MBCable *cable) {
 			;
 		else if (comp1->os == OS_WINGDOWS || comp2->os == OS_WINGDOWS) {
 			active = 1;
-			delay = SPARK_DELAY([game Game_level]);
+			delay = [spark SPARK_DELAYWithLevel:[game Game_level]];
 			if (comp2->os == OS_WINGDOWS)
 				reverse(self);
 			x = x1;
@@ -150,7 +150,7 @@ reverse(MBCable *cable) {
 - (void)Cable_reset
 {
 	active = 0;
-	delay = SPARK_DELAY([game Game_level]);
+	delay = [spark SPARK_DELAYWithLevel:[game Game_level]];
 }
 
 @end
