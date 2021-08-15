@@ -6,7 +6,7 @@
 #import "MBComputer.h"
 #import "MBGame.h"
 #import "MBNetwork.h"
-#import "MBUI.h"
+#import "MacBill-Swift.h"
 
 static MBBill *alive, *strays;
 static int counters[HORDE_COUNTER_MAX + 1];

@@ -7,7 +7,6 @@
 #import "MBHorde.h"
 #import "MBNetwork.h"
 #import "MBGame.h"
-#import "MBUI.h"
 #import "MacBill-Swift.h"
 
 static MBGame *game;
@@ -64,8 +63,7 @@ determineOS(MBComputer *computer) {
 		for (j = 0; j < index && flag; j++) {
 			MBComputer *c = [network Network_get_computer:j];
 			int twidth = width - BILL_OFFSET_X + [MBBill Bill_width];
-			if ([ui UI_intersect:randx :randy :twidth :height
-					 :c->x :c->y :twidth :height])
+			if ([ui UI_intersectWithX1:randx y1:randy w1:twidth h1:height x2:c->x y2:c->y w2:twidth h2:height])
 				flag = 0;
 		}
 	} while (!flag);
@@ -94,18 +92,20 @@ determineOS(MBComputer *computer) {
 
 - (void)Computer_draw
 {
-	[ui UI_draw:pictures[type] :x :y];
-	if (os != MBOS.OS_OFF)
+	[ui UI_drawWithPict:pictures[type] x:x y:y];
+	if (os != MBOS.OS_OFF) {
 		[Os OS_drawWithIndex:os x:x + OS_OFFSET y:y + OS_OFFSET];
+	}
 }
 
 + (void)Computer_load_pix
 {
 	unsigned int i;
-	for (i = 0; i < NUM_SYS; i++)
-		[ui UI_load_picture:cpuname[i] :1 :&pictures[i]];
-	width = [ui UI_picture_width:pictures[0]];
-	height = [ui UI_picture_height:pictures[0]];
+	for (i = 0; i < NUM_SYS; i++) {
+		[ui UI_load_pictureWithName:[NSString stringWithCString:cpuname[i] encoding:NSUTF8StringEncoding] trans:1 picture:&pictures[i]];
+	}
+	width = [ui UI_picture_widthWithPict:pictures[0]];
+	height = [ui UI_picture_heightWithPict:pictures[0]];
 }
 
 - (int)Computer_width

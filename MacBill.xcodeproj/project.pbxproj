@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		4555E1E526C8431100A77DDA /* MBImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555E1E426C8431100A77DDA /* MBImageView.swift */; };
+		4555E1E926C90D0F00A77DDA /* MBUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555E1E826C90D0F00A77DDA /* MBUI.swift */; };
 		4575F145249E959100C14259 /* MacBillTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4575F144249E959100C14259 /* MacBillTests.m */; };
 		45A9D62026B61AF1004805E1 /* MBSpark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9D61F26B61AF1004805E1 /* MBSpark.swift */; };
 		45A9D62226B6C9CF004805E1 /* MBBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9D62126B6C9CF004805E1 /* MBBucket.swift */; };
@@ -31,7 +32,6 @@
 		F3A11A6B12F5FD56002F26FE /* MBHorde.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A5812F5FD55002F26FE /* MBHorde.m */; };
 		F3A11A6D12F5FD56002F26FE /* MBNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A5C12F5FD56002F26FE /* MBNetwork.m */; };
 		F3A11A6F12F5FD56002F26FE /* MBScorelist.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A6012F5FD56002F26FE /* MBScorelist.m */; };
-		F3A11A7112F5FD56002F26FE /* MBUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A6412F5FD56002F26FE /* MBUI.m */; };
 		F3A11AAB12F5FDB7002F26FE /* about.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F3A11A7712F5FDB6002F26FE /* about.tiff */; };
 		F3A11AAC12F5FDB7002F26FE /* apple.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F3A11A7812F5FDB6002F26FE /* apple.tiff */; };
 		F3A11AAD12F5FDB7002F26FE /* billA_0.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F3A11A7912F5FDB6002F26FE /* billA_0.tiff */; };
@@ -112,6 +112,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		4555E1E426C8431100A77DDA /* MBImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBImageView.swift; sourceTree = "<group>"; };
+		4555E1E826C90D0F00A77DDA /* MBUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBUI.swift; sourceTree = "<group>"; };
 		4575F134249E8A5D00C14259 /* MacBillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacBillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4575F142249E959100C14259 /* MacBillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacBillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4575F144249E959100C14259 /* MacBillTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacBillTests.m; sourceTree = "<group>"; };
@@ -151,8 +152,6 @@
 		F3A11A5C12F5FD56002F26FE /* MBNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBNetwork.m; sourceTree = "<group>"; };
 		F3A11A5F12F5FD56002F26FE /* MBScorelist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBScorelist.h; sourceTree = "<group>"; };
 		F3A11A6012F5FD56002F26FE /* MBScorelist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBScorelist.m; sourceTree = "<group>"; };
-		F3A11A6312F5FD56002F26FE /* MBUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBUI.h; sourceTree = "<group>"; };
-		F3A11A6412F5FD56002F26FE /* MBUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBUI.m; sourceTree = "<group>"; };
 		F3A11A7312F5FD63002F26FE /* MButil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MButil.h; sourceTree = "<group>"; };
 		F3A11A7712F5FDB6002F26FE /* about.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = about.tiff; sourceTree = "<group>"; };
 		F3A11A7812F5FDB6002F26FE /* apple.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = apple.tiff; sourceTree = "<group>"; };
@@ -257,8 +256,7 @@
 				F3A11A5F12F5FD56002F26FE /* MBScorelist.h */,
 				F3A11A6012F5FD56002F26FE /* MBScorelist.m */,
 				45A9D61F26B61AF1004805E1 /* MBSpark.swift */,
-				F3A11A6312F5FD56002F26FE /* MBUI.h */,
-				F3A11A6412F5FD56002F26FE /* MBUI.m */,
+				4555E1E826C90D0F00A77DDA /* MBUI.swift */,
 				45A9D61E26B61AF1004805E1 /* MacBill-Bridging-Header.h */,
 			);
 			name = Classes;
@@ -639,7 +637,7 @@
 				F3A11A6D12F5FD56002F26FE /* MBNetwork.m in Sources */,
 				F3A11A6F12F5FD56002F26FE /* MBScorelist.m in Sources */,
 				45A9D62026B61AF1004805E1 /* MBSpark.swift in Sources */,
-				F3A11A7112F5FD56002F26FE /* MBUI.m in Sources */,
+				4555E1E926C90D0F00A77DDA /* MBUI.swift in Sources */,
 				45A9D62526B6DF9C004805E1 /* MBOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,13 +2,13 @@
 
 #import "MButil.h"
 
+#import "MBAqua.h"
 #import "MBBill.h"
 #import "MBComputer.h"
 #import "MBCable.h"
 #import "MBHorde.h"
 #import "MBNetwork.h"
 #import "MBScorelist.h"
-#import "MBUI.h"
 #import "MacBill-Swift.h"
 
 #define SCREENSIZE 400
@@ -39,7 +39,7 @@ static int screensize = SCREENSIZE;
 	level = newlevel;
 	[horde Horde_setup];
 	grabbed = NULL;
-	[ui UI_set_cursor:defaultcursor];
+	[ui UI_set_cursorWithCursor:defaultcursor];
 	[network Network_setup];
 	iteration = 0;
 	efficiency = 0;
@@ -57,7 +57,7 @@ static int screensize = SCREENSIZE;
 	int units = [network Network_num_computers];
 	sprintf(str, "Bill:%d/%d  System:%d/%d/%d  Level:%d  Score:%d",
 		on_screen, off_screen, base, off, win, level, score);
-	[ui UI_draw_str:str :5 :screensize - 5];
+	[ui UI_draw_strWithStr:[NSString stringWithCString:str encoding:NSUTF8StringEncoding] x:5 y:screensize-5];
 	efficiency += ((100 * base - 10 * win) / units);
 }
 
@@ -66,11 +66,11 @@ static int screensize = SCREENSIZE;
 {
     char str[15];
 	[ui UI_clear];
-	[ui UI_draw:logo
-		:(screensize - [ui UI_picture_width:logo]) / 2
-		:(screensize - [ui UI_picture_height:logo]) / 2];
+	[ui UI_drawWithPict:logo
+		x:(screensize - [ui UI_picture_widthWithPict:logo]) / 2
+		y:(screensize - [ui UI_picture_heightWithPict:logo]) / 2];
     sprintf(str, "Click to start");
-    [ui UI_draw_str:str :167 :screensize/7*5];
+	[ui UI_draw_strWithStr:[NSString stringWithCString:str encoding:NSUTF8StringEncoding] x:167 y:screensize/7*5];
 }
 
 - (void)Game_start:(int)newlevel
@@ -78,7 +78,7 @@ static int screensize = SCREENSIZE;
 	state = STATE_PLAYING;
 	score = 0;
 	[ui UI_restart_timer];
-	[ui UI_set_pausebutton:1];
+	[ui UI_set_pausebuttonWithAction:1];
 	[self setup_level:newlevel];
 }
 
@@ -112,7 +112,7 @@ static int screensize = SCREENSIZE;
 
 	if (state != STATE_PLAYING)
 		return;
-	[ui UI_set_cursor:downcursor];
+	[ui UI_set_cursorWithCursor:downcursor];
 
 	if ([bucket Bucket_clickedWithX:x y:y]) {
 		[bucket Bucket_grabWithX:x y:y];
@@ -132,7 +132,7 @@ static int screensize = SCREENSIZE;
 - (void)Game_button_release:(int)x :(int)y
 {
 	int i;
-	[ui UI_set_cursor:defaultcursor];
+	[ui UI_set_cursorWithCursor:defaultcursor];
 
     if (state == STATE_WAITING) {
         [self Game_start:1];
@@ -194,25 +194,25 @@ static int screensize = SCREENSIZE;
 			state = STATE_END;
 		break;
 	case STATE_END:
-		[ui UI_set_cursor:defaultcursor];
+		[ui UI_set_cursorWithCursor:defaultcursor];
 		[ui UI_clear];
 		[network Network_toasters];
 		[network Network_draw];
 		[ui UI_refresh];
-		[ui UI_popup_dialog:DIALOG_ENDGAME];
+		[ui UI_popup_dialogWithDialog:DIALOG_ENDGAME];
 		if ([scorelist Scorelist_ishighscore:score]) {
-			[ui UI_popup_dialog:DIALOG_ENTERNAME];
+			[ui UI_popup_dialogWithDialog:DIALOG_ENTERNAME];
 		}
-		[ui UI_popup_dialog:DIALOG_HIGHSCORE];
+		[ui UI_popup_dialogWithDialog:DIALOG_HIGHSCORE];
 		[self draw_logo];
 		[ui UI_kill_timer];
-		[ui UI_set_pausebutton:0];
+		[ui UI_set_pausebuttonWithAction:0];
 		state = STATE_WAITING;
 		break;
 	case STATE_BETWEEN:
-		[ui UI_set_cursor:defaultcursor];
+		[ui UI_set_cursorWithCursor:defaultcursor];
 		sprintf(str, "After Level %d:\nScore: %d", level, score);
-		[ui UI_popup_dialog:DIALOG_SCORE];
+		[ui UI_popup_dialogWithDialog:DIALOG_SCORE];
 		state = STATE_PLAYING;
 		[self setup_level:++level];
 		break;
@@ -257,24 +257,24 @@ static int screensize = SCREENSIZE;
 	[MBComputer Computer_class_init:self :network :os :ui];
 
 	srandom((unsigned)time(NULL));
-	[ui UI_make_main_window:screensize];
-	[ui UI_load_picture:"logo" :0 :&logo];
-	[ui UI_load_picture:"icon" :0 :&icon];
-	[ui UI_load_picture:"about" :0 :&about];
+	[ui UI_make_main_windowWithSize:screensize];
+	[ui UI_load_pictureWithName:@"logo" trans:0 picture:&logo];
+	[ui UI_load_pictureWithName:@"icon" trans:0 picture:&icon];
+	[ui UI_load_pictureWithName:@"about" trans:0 picture:&about];
 	[self draw_logo];
 	[ui UI_refresh];
 
 	[scorelist Scorelist_read];
 
-	[ui UI_load_cursor:"hand_up" :CURSOR_SEP_MASK :&defaultcursor];
-	[ui UI_load_cursor:"hand_down" :CURSOR_SEP_MASK :&downcursor];
-	[ui UI_set_cursor:defaultcursor];
+	[ui UI_load_cursorWithName:@"hand_up" masked:MBUI.CURSOR_SEP_MASK cursorp:&defaultcursor];
+	[ui UI_load_cursorWithName:@"hand_down" masked:MBUI.CURSOR_SEP_MASK cursorp:&downcursor];
+	[ui UI_set_cursorWithCursor:defaultcursor];
 
 	[MBBill Bill_load_pix];
 	[MBComputer Computer_load_pix];
 
 	state = STATE_WAITING;
-	[ui UI_set_pausebutton:0];
+	[ui UI_set_pausebuttonWithAction:0];
 
 	return self;
 }

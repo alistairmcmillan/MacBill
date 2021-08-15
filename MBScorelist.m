@@ -1,6 +1,6 @@
 #import "MBScorelist.h"
 
-#import "MBUI.h"
+#import "MacBill-Swift.h"
 
 #define NAMELEN 20
 #define SCORES 10

@@ -1,7 +1,6 @@
 #import "MBAqua.h"
 
 #import "MBGame.h"
-#import "MBUI.h"
 #import "MacBill-Swift.h"
 
 #define DIALOG_OK		(YES)
@@ -81,7 +80,7 @@ static int screensize;
 	};
 }
 
-- (void)aqua_load_cursor:(const char *)name :(int)masked :(NSCursor **)cursorp
+- (void)aqua_load_cursor:(NSString *)name :(int)masked :(NSCursor **)cursorp
 {
 	NSCursor *cursor;
 	NSImage *pict;
@@ -96,11 +95,10 @@ static int screensize;
  * Pixmap handling
  */
 
-- (void)aqua_load_picture:(const char *)name :(int)trans :(NSImage **)pictp
+- (void)aqua_load_picture:(NSString *)name :(int)trans :(NSImage **)pictp
 {
 	NSImage *pict;
-	NSString *s = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
-	pict = [NSImage imageNamed:s];
+	pict = [NSImage imageNamed:name];
 	*pictp = pict;
 }
 
@@ -147,13 +145,12 @@ static int screensize;
 	[frame unlockFocus];
 }
 
-- (void)aqua_draw_string:(const char *)str :(int)x :(int)y
+- (void)aqua_draw_string:(NSString *)str :(int)x :(int)y
 {
-	NSString *status = [NSString stringWithCString:str encoding:NSUTF8StringEncoding];
 	NSDictionary *attrs = nil;
-	NSSize size = [status sizeWithAttributes:attrs];
+	NSSize size = [str sizeWithAttributes:attrs];
 	[frame lockFocus];
-	[status drawAtPoint:NSMakePoint(x, y - size.height) withAttributes:attrs];
+	[str drawAtPoint:NSMakePoint(x, y - size.height) withAttributes:attrs];
 	[frame unlockFocus];
 }
 
@@ -221,9 +218,9 @@ static int screensize;
 	menu_pause_enable_flag = (action ? YES : NO);
 }
 
-- (void)aqua_audio_play:(const char *)str
+- (void)aqua_audio_play:(NSString *)str
 {
-	[[[NSSound soundNamed:[NSString stringWithUTF8String:str]] copy] play];
+	[[[NSSound soundNamed:str] copy] play];
 }
 
 - (IBAction)new_game:(id)sender
@@ -247,7 +244,7 @@ static int screensize;
 
 - (IBAction)pause_game:(id)sender
 {
-	[ui UI_popup_dialog:DIALOG_PAUSEGAME];
+	[ui UI_popup_dialogWithDialog:DIALOG_PAUSEGAME];
 }
 
 - (IBAction)quit_game:(id)sender
@@ -360,7 +357,7 @@ static int screensize;
 	[entry setStringValue:NSUserName()];
 
 	[game Game_set_size:[[defaults objectForKey:@"fieldsize"] intValue]];
-	[ui UI_set_interval:[[defaults objectForKey:@"interval"] intValue]];
+	[ui UI_set_intervalWithTi:[[defaults objectForKey:@"interval"] intValue]];
 	[view setTransparencyWithTrans:[[defaults objectForKey:@"transparency"] intValue]];
 
 	[game Game_main];

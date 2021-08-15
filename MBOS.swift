@@ -41,19 +41,19 @@ class MBOS: NSObject {
 	}()
 
 	@objc func OS_draw(index: Int32, x:Int32, y:Int32) {
-		ui.ui_draw(MBOS.os[Int(index)], x, y)
+		ui.UI_draw(pict: MBOS.os[Int(index)], x: x, y: y)
 	}
 	
 	@objc func OS_width() -> Int32 {
-		return ui.ui_picture_width(MBOS.os[0])
+		return ui.UI_picture_width(pict: MBOS.os[0])
 	}
 
 	@objc func OS_height() -> Int32 {
-		return ui.ui_picture_height(MBOS.os[0])
+		return ui.UI_picture_height(pict: MBOS.os[0])
 	}
 
 	@objc func OS_set_cursor(index:Int32) {
-		ui.ui_set_cursor(MBOS.cursor[Int(index)])
+		ui.UI_set_cursor(cursor: MBOS.cursor[Int(index)])
 	}
 	
 	@objc func OS_randpc() -> Int32 {

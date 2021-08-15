@@ -7,7 +7,6 @@
 #import "MBComputer.h"
 #import "MBGame.h"
 #import "MBNetwork.h"
-#import "MBUI.h"
 #import "MacBill-Swift.h"
 
 static MBGame *game;
@@ -64,7 +63,7 @@ reverse(MBCable *cable) {
 
 - (void)Cable_draw
 {
-	[ui UI_draw_line:x1 :y1 :x2 :y2];
+	[ui UI_draw_lineWithX1:x1 y1:y1 x2:x2 y2:y2];
 	if (active) {
 		int rx = x - [spark Spark_width]/2;
 		int ry = y - [spark Spark_height]/2;

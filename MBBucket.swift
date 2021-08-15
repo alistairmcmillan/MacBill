@@ -24,14 +24,14 @@ class MBBucket: NSObject {
 	@objc
 	func Bucket_draw () {
 		if (MBBucket.grabbed == 0) {
-			ui.ui_draw(MBBucket.picture, 0, 0)
+			ui.UI_draw(pict: MBBucket.picture, x: 0, y: 0)
 		}
 	}
 	
 	@objc
 	func Bucket_clicked (x:Int32, y:Int32) -> Bool {
-		return (x > 0 && x < ui.ui_picture_width(MBBucket.picture) &&
-				y > 0 && y < ui.ui_picture_height(MBBucket.picture))
+		return (x > 0 && x < ui.UI_picture_width(pict: MBBucket.picture) &&
+					y > 0 && y < ui.UI_picture_height(pict: MBBucket.picture))
 	}
 
 	@objc
@@ -39,7 +39,7 @@ class MBBucket: NSObject {
 //		UNUSED(x);
 //		UNUSED(y);
 
-		ui.ui_set_cursor(MBBucket.cursor)
+		ui.UI_set_cursor(cursor: MBBucket.cursor)
 		MBBucket.grabbed = 1;
 	}
 

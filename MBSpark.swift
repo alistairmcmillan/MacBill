@@ -43,7 +43,7 @@ class MBSpark: NSObject {
 	
 	@objc
 	func Spark_draw (x:Int32, y:Int32, index:Int32) -> Void {
-		ui.ui_draw(MBSpark.pictures[Int(index)], x, y)
+		ui.UI_draw(pict: MBSpark.pictures[Int(index)], x: x, y: y)
 	}
 	
 }

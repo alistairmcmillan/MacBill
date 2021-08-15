@@ -6,7 +6,6 @@
 #import "MBGame.h"
 #import "MBHorde.h"
 #import "MBNetwork.h"
-#import "MBUI.h"
 #import "MacBill-Swift.h"
 
 /* speed at which OS drops */
@@ -98,7 +97,7 @@ static void
 draw_std(MBBill *bill) {
 	if (bill->cargo >= 0)
 		[os OS_drawWithIndex:bill->cargo x:bill->x + bill->x_offset y:bill->y + bill->y_offset];
-	[ui UI_draw:bill->cels[bill->index] :bill->x :bill->y];
+	[ui UI_drawWithPict:bill->cels[bill->index] x:bill->x y:bill->y];
 }
 
 static void
@@ -108,7 +107,7 @@ draw_at(MBBill *bill) {
 		[os OS_drawWithIndex:0 x:bill->x + bill->sx y:bill->y + bill->sy];
 	if (bill->cargo >= 0)
 		[os OS_drawWithIndex:bill->cargo x:bill->x + bill->x_offset y:bill->y + bill->y_offset];
-	[ui UI_draw:bill->cels[bill->index] :computer->x :computer->y];
+	[ui UI_drawWithPict:bill->cels[bill->index] x:computer->x y:computer->y];
 }
 
 static void
@@ -228,7 +227,7 @@ update_at(MBBill *bill) {
 		computer->os = MBOS.OS_WINGDOWS;
 		[network Network_inc_counter:NETWORK_COUNTER_OFF: -1];
 		[network Network_inc_counter:NETWORK_COUNTER_WIN: 1];
-		[ui UI_audio_play:"mssound"];
+		[ui UI_audio_playWithName:@"mssound"];
 		break;
 	case 12:
 		bill->x += 11;
@@ -240,8 +239,7 @@ update_at(MBBill *bill) {
 static void
 update_out(MBBill *bill) {
 	int screensize = [game Game_screensize];
-	if ([ui UI_intersect:bill->x :bill->y :width :height :0 :0
-			 :screensize :screensize])
+	if ([ui UI_intersectWithX1:bill->x y1:bill->y w1:width h1:height x2:0 y2:0 w2:screensize h2:screensize])
 	{
 		move(bill, FAST);
 		bill->index++;
@@ -360,7 +358,7 @@ update_dying(MBBill *bill) {
 	state = BILL_STATE_DYING;
 	int r = arc4random_uniform(3);
 	NSString *audioName = [@"ahh" stringByAppendingString:[NSString stringWithFormat:@"%d", r]];
-	[ui UI_audio_play:[audioName cStringUsingEncoding:NSUTF8StringEncoding]];
+	[ui UI_audio_playWithName:audioName];
 }
 
 - (int)Bill_clicked:(int)locx :(int)locy
@@ -379,19 +377,21 @@ update_dying(MBBill *bill) {
 {
 	int i;
 	for (i = 0; i < WCELS - 1; i++) {
-		[ui UI_load_picture_indexed:"billL" :i :1 :&lcels[i]];
-		[ui UI_load_picture_indexed:"billR" :i :1 :&rcels[i]];
+		[ui UI_load_picture_indexedWithName:@"billL" index:i trans:1 picture:&lcels[i]];
+		[ui UI_load_picture_indexedWithName:@"billR" index:i trans:1 picture:&rcels[i]];
 	}
 	lcels[WCELS - 1] = lcels[1];
 	rcels[WCELS - 1] = rcels[1];
 
-	for (i = 0; i < DCELS; i++)
-		[ui UI_load_picture_indexed:"billD" :i :1 :&dcels[i]];
-	width = [ui UI_picture_width:dcels[0]];
-	height = [ui UI_picture_height:dcels[0]];
+	for (i = 0; i < DCELS; i++) {
+		[ui UI_load_picture_indexedWithName:@"billD" index:i trans:1 picture:&dcels[i]];
+	}
+	width = [ui UI_picture_widthWithPict:dcels[0]];
+	height = [ui UI_picture_heightWithPict:dcels[0]];
 
-	for (i = 0; i < ACELS; i++)
-		[ui UI_load_picture_indexed:"billA" :i :1 :&acels[i]];
+	for (i = 0; i < ACELS; i++) {
+		[ui UI_load_picture_indexedWithName:@"billA" index:i trans:1 picture:&acels[i]];
+	}
 }
 
 + (int)Bill_width
