@@ -358,7 +358,7 @@ static int screensize;
 
 	[game Game_set_size:[[defaults objectForKey:@"fieldsize"] intValue]];
 	[ui UI_set_intervalWithTi:[[defaults objectForKey:@"interval"] intValue]];
-	[view setTransparencyWithTrans:[[defaults objectForKey:@"transparency"] intValue]];
+	[view setTransparencyWithTrans:[[defaults objectForKey:@"transparency"] floatValue]];
 
 	[game Game_main];
 }
