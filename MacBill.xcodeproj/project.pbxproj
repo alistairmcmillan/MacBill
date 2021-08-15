@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		4555E1E526C8431100A77DDA /* MBImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555E1E426C8431100A77DDA /* MBImageView.swift */; };
 		4575F145249E959100C14259 /* MacBillTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4575F144249E959100C14259 /* MacBillTests.m */; };
 		45A9D62026B61AF1004805E1 /* MBSpark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9D61F26B61AF1004805E1 /* MBSpark.swift */; };
 		45A9D62226B6C9CF004805E1 /* MBBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9D62126B6C9CF004805E1 /* MBBucket.swift */; };
@@ -28,7 +29,6 @@
 		F3A11A6912F5FD56002F26FE /* MBComputer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A5412F5FD55002F26FE /* MBComputer.m */; };
 		F3A11A6A12F5FD56002F26FE /* MBGame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A5612F5FD55002F26FE /* MBGame.m */; };
 		F3A11A6B12F5FD56002F26FE /* MBHorde.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A5812F5FD55002F26FE /* MBHorde.m */; };
-		F3A11A6C12F5FD56002F26FE /* MBImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A5A12F5FD55002F26FE /* MBImageView.m */; };
 		F3A11A6D12F5FD56002F26FE /* MBNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A5C12F5FD56002F26FE /* MBNetwork.m */; };
 		F3A11A6F12F5FD56002F26FE /* MBScorelist.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A6012F5FD56002F26FE /* MBScorelist.m */; };
 		F3A11A7112F5FD56002F26FE /* MBUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A11A6412F5FD56002F26FE /* MBUI.m */; };
@@ -111,6 +111,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		4555E1E426C8431100A77DDA /* MBImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBImageView.swift; sourceTree = "<group>"; };
 		4575F134249E8A5D00C14259 /* MacBillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacBillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4575F142249E959100C14259 /* MacBillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacBillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4575F144249E959100C14259 /* MacBillTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacBillTests.m; sourceTree = "<group>"; };
@@ -146,8 +147,6 @@
 		F3A11A5612F5FD55002F26FE /* MBGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBGame.m; sourceTree = "<group>"; };
 		F3A11A5712F5FD55002F26FE /* MBHorde.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBHorde.h; sourceTree = "<group>"; };
 		F3A11A5812F5FD55002F26FE /* MBHorde.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBHorde.m; sourceTree = "<group>"; };
-		F3A11A5912F5FD55002F26FE /* MBImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBImageView.h; sourceTree = "<group>"; };
-		F3A11A5A12F5FD55002F26FE /* MBImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBImageView.m; sourceTree = "<group>"; };
 		F3A11A5B12F5FD55002F26FE /* MBNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBNetwork.h; sourceTree = "<group>"; };
 		F3A11A5C12F5FD56002F26FE /* MBNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBNetwork.m; sourceTree = "<group>"; };
 		F3A11A5F12F5FD56002F26FE /* MBScorelist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBScorelist.h; sourceTree = "<group>"; };
@@ -251,8 +250,7 @@
 				F3A11A5612F5FD55002F26FE /* MBGame.m */,
 				F3A11A5712F5FD55002F26FE /* MBHorde.h */,
 				F3A11A5812F5FD55002F26FE /* MBHorde.m */,
-				F3A11A5912F5FD55002F26FE /* MBImageView.h */,
-				F3A11A5A12F5FD55002F26FE /* MBImageView.m */,
+				4555E1E426C8431100A77DDA /* MBImageView.swift */,
 				F3A11A5B12F5FD55002F26FE /* MBNetwork.h */,
 				F3A11A5C12F5FD56002F26FE /* MBNetwork.m */,
 				45A9D62326B6DD6F004805E1 /* MBOS.swift */,
@@ -632,12 +630,12 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				F3A11A6512F5FD56002F26FE /* MBAqua.m in Sources */,
 				F3A11A6612F5FD56002F26FE /* MBBill.m in Sources */,
+				4555E1E526C8431100A77DDA /* MBImageView.swift in Sources */,
 				F3A11A6812F5FD56002F26FE /* MBCable.m in Sources */,
 				F3A11A6912F5FD56002F26FE /* MBComputer.m in Sources */,
 				45A9D62226B6C9CF004805E1 /* MBBucket.swift in Sources */,
 				F3A11A6A12F5FD56002F26FE /* MBGame.m in Sources */,
 				F3A11A6B12F5FD56002F26FE /* MBHorde.m in Sources */,
-				F3A11A6C12F5FD56002F26FE /* MBImageView.m in Sources */,
 				F3A11A6D12F5FD56002F26FE /* MBNetwork.m in Sources */,
 				F3A11A6F12F5FD56002F26FE /* MBScorelist.m in Sources */,
 				45A9D62026B61AF1004805E1 /* MBSpark.swift in Sources */,

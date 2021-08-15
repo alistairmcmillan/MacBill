@@ -2,8 +2,7 @@
 
 #import "MBGame.h"
 #import "MBUI.h"
-
-#import "MBImageView.h"
+#import "MacBill-Swift.h"
 
 #define DIALOG_OK		(YES)
 #define DIALOG_CANCEL	(NO)
@@ -75,10 +74,10 @@ static int screensize;
 			options:NSCaseInsensitiveSearch
 			range:NSMakeRange(0, 4)] == NSOrderedSame) {
 		[NSCursor unhide];
-		[view drawCursor:NO];
+		[view drawCursorWithFlag:NO];
 	} else {
 		[NSCursor hide];
-		[view drawCursor:YES];
+		[view drawCursorWithFlag:YES];
 	};
 }
 
@@ -125,7 +124,7 @@ static int screensize;
 
 - (void)aqua_refresh_window
 {
-	[view setSubimage:frame];
+	[view setSubimageWithImage:frame];
 	[view setNeedsDisplay:YES];
 }
 
@@ -362,7 +361,7 @@ static int screensize;
 
 	[game Game_set_size:[[defaults objectForKey:@"fieldsize"] intValue]];
 	[ui UI_set_interval:[[defaults objectForKey:@"interval"] intValue]];
-	[view setTransparency:[[defaults objectForKey:@"transparency"] intValue]];
+	[view setTransparencyWithTrans:[[defaults objectForKey:@"transparency"] intValue]];
 
 	[game Game_main];
 }
