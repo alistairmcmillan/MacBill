@@ -225,7 +225,9 @@ static int screensize;
 
 - (void)aqua_audio_play:(const char *)str
 {
-	[[[NSSound soundNamed:[NSString stringWithUTF8String:str]] copy] play];
+	NSSound *sound = [[NSSound soundNamed:[NSString stringWithUTF8String:str]] copy];
+	[sound play];
+	[sound release];
 }
 
 - (IBAction)new_game:(id)sender
